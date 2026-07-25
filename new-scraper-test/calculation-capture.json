@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-11-30T09:53:50.871Z",
+  "calculationRequests": [
+    {
+      "url": "https://canada.tt.omtrdc.net/rest/v1/delivery?client=canada&sessionId=21417aeab38742eaa38d3bcbd4d5eed6&version=2.11.4",
+      "method": "POST",
+      "headers": {
+        "referer": "https://apps.cra-arc.gc.ca/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "text/plain",
+        "accept": "*/*",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"requestId\":\"cea5570947324414ad7174f552f7e863\",\"context\":{\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\",\"clientHints\":{\"mobile\":false,\"platform\":\"\",\"browserUAWithMajorVersion\":\"\"},\"timeOffsetInMinutes\":330,\"channel\":\"web\",\"screen\":{\"width\":1536,\"height\":864,\"orientation\":\"portrait\",\"colorDepth\":24,\"pixelRatio\":1.0000000149011612},\"window\":{\"width\":800,\"height\":600},\"browser\":{\"host\":\"apps.cra-arc.gc.ca\",\"webGLRenderer\":\"ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)\"},\"address\":{\"url\":\"https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step1\",\"referringUrl\":\"\"}},\"id\":{\"marketingCloudVisitorId\":\"21604954813618562473149811957599303898\"},\"experienceCloud\":{\"audienceManager\":{\"locationHint\":12,\"blob\":\"6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y\"},\"analytics\":{\"logging\":\"server_side\",\"supplementalDataId\":\"211244DE2080DAB6-2D6FECC5AAD69CE6\",\"trackingServer\":\"canada.sc.omtrdc.net\",\"trackingServerSecure\":\"canada.sc.omtrdc.net\"}},\"execute\":{\"pageLoad\":{}},\"prefetch\":{\"views\":[{}]}}"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/log/noop",
+      "method": "POST",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step1",
+        "rccr-client-id": "fc0efa2d-461a-399e-5f3c-f0013c0b7262",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=16692900.644ccd10c7865; JSESSIONID=_bbULVM3fs-d5BAnQfEazlLzBnZVqutulYdgCNA4WMzkH7ovtFFe!1414268585!594031258; cookiesession1=678B768FFB5DA6F010ED20FF9A8648CB; TS01338dea=01450b64502fa52ce7d78533135f146bfe8d59c6a691cc6f82ed7186b8fb6e664d118bd61281b1c9e6d32b7508eba9b6887d4e07a55234ae299efcc06448d13dd07db8ff25356df6eb646e6ea2401b5689eae824eb8f51a1f5bfe76e2feda256caa46651d0; at_check=true; s_plt=2.89; s_pltp=undefined; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#21417aeab38742eaa38d3bcbd4d5eed6#1764498194|PC#21417aeab38742eaa38d3bcbd4d5eed6.41_0#1827741134; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/step1; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C21604954813618562473149811957599303898%7CMCAAMLH-1765101132%7C12%7CMCAAMB-1765101132%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503533s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; TS8606329d027=0864106fd4ab200080dff35c48d49724971a69d2003091767f4770382560a2d87794b9b09a318c04080f85da101130004ff6f2e2e29686e58959ab2c62b5efbaba90dc239d61dae28cfbca10c4fe099d5592057697ebfd12df4a4363d5f4595c",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{}"
+    }
+  ],
+  "calculationResponse": null,
+  "screenshots": [
+    "step1-loaded.png",
+    "step2-after-next.png",
+    "step3-salary-selected.png",
+    "step4-form-filled.png",
+    "step5-after-calculate.png"
+  ],
+  "amounts": null
+}

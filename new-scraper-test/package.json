@@ -1,0 +1,16 @@
+{
+  "name": "cra-api-investigator",
+  "version": "1.0.0",
+  "description": "Investigation tool to reverse-engineer CRA Payroll Calculator API",
+  "main": "api-investigator.js",
+  "scripts": {
+    "investigate": "node api-investigator.js",
+    "test": "node api-investigator.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0",
+    "axios": "^1.6.0",
+    "axios-cookiejar-support": "^5.0.0",
+    "tough-cookie": "^4.1.0"
+  }
+}

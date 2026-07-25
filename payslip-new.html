@@ -1,0 +1,1112 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payslips - SHIVARAMA KRISHNA SANGEKARI</title>
+    <style>
+.period-dates {
+            font-family: monospace;
+        }
+        
+        .period-dates-table {
+            font-family: monospace;
+        }
+        
+        .period-dates-table td {
+            padding: 2px 0;
+            font-size: 10px!important;
+            vertical-align: top;
+        }
+        
+        .period-dates-table td:first-child {
+            padding-right: 10px;
+        }
+.watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-20deg);
+            pointer-events: none;
+            z-index: 1000;
+            text-align: center;
+            opacity: 0.3;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #888888;
+            white-space: nowrap;
+        }
+        
+        .watermark-text {
+            display: block;
+            line-height: 0.9;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        }
+        
+        .watermark .english {
+            font-size: 48px;
+            margin-bottom: 2px;
+            letter-spacing: 3px;
+        }
+        
+        .watermark .french {
+            font-size: 48px;
+            letter-spacing: 3px;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            
+            .payslip-container {
+                page-break-after: always;
+                page-break-inside: avoid;
+                margin: 0 auto;
+                padding: 5px 15px;
+                min-height: auto;
+                max-height: none;
+                height: auto;
+                overflow: visible;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                max-width: 100%;
+                zoom: 0.9;
+            }
+            
+            .main-content {
+                flex: 0 1 auto;
+            }
+            
+            .payslip-container:last-child {
+                page-break-after: auto;
+            }
+            
+            @page {
+                size: A4 portrait;
+                margin: 0.7cm;
+            }
+            
+            .deposit-section {
+                margin-top: 5px;
+                position: relative;
+                bottom: 0;
+                page-break-inside: avoid;
+                page-break-before: avoid;
+            }
+            
+            /* Reduce some spacing */
+            .section-title {
+                margin-bottom: 2px;
+            }
+            
+            .employee-section {
+                margin: 8px 0;
+            }
+            
+            /* Reduce table spacing */
+            .earnings-table, 
+            .deductions-table,
+            .net-pay-table,
+            .benefits-table {
+                margin-bottom: 5px;
+            }
+            
+            /* Ensure no breaks within important sections */
+            .header-section, .employee-section, .main-content, .deposit-section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            font-size: 16px; /* Increased from 12px */
+            
+            margin: 0;
+            padding: 25px; /* Increased padding */
+            background: white;
+            color: black;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .payslip-container {
+            width: 100%;
+            max-width: 21cm; /* A4 width */
+            margin: 0 auto;
+            background: white;
+            position: relative;
+            page-break-after: always;
+            box-sizing: border-box;
+            padding: 15px 40px 10px; /* Reduced top padding */
+            display: flex;
+            flex-direction: column;
+            min-height: 29.7cm; /* A4 height */
+        }
+        
+        .payslip-content {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        
+        .main-content {
+            flex: 1;
+        }
+        
+        .deposit-section {
+            margin-top: 10px;
+            padding-top: 5px;
+            border-top: 1px dashed #000;
+        }
+        
+        .important-notes {
+            margin: 3px 0 0;
+            padding: 3px 0;
+            line-height: 1.1;
+        }
+        
+        .payslip-container:last-child {
+            page-break-after: auto;
+        }
+        
+        .header-section {
+            margin-bottom: 15px;
+        }
+        
+        .top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .header-codes {
+            font-size: 10px; /* Increased from 8px */
+            line-height: 1.2;
+        }
+        
+        .earnings-statement {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px; /* Increased from 16px */
+        }
+        
+        .company-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .company-section {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .logo-placeholder {
+            width: 60px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px; /* Increased from 8px */
+            margin-right: 15px;
+            color: white;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+        
+        .company-info {
+            font-size: 11px; /* Increased from 9px */
+            line-height: 1.1;
+        }
+        
+        .company-name {
+            font-weight: bold;
+        }
+        
+        .period-dates {
+            text-align: right;
+            font-size: 11px; /* Increased from 9px */
+        }
+        
+        .employee-section {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        
+        .exemptions {
+            font-size: 10px; /* Increased from 8px */
+        }
+        
+        .employee-info {
+            text-align: right;
+            font-weight: bold;
+            font-size: 14px; /* Increased from 10px */
+        }
+        
+        .employee-name {
+            font-size: 14px; /* Increased from 11px */
+            margin-bottom: 3px;
+        }
+        
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        .left-section {
+            width: 400px;
+        }
+        
+        .right-section {
+            width: 200px;
+            margin-top: 20px;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            font-size: 16px; /* Increased from 13px */
+            margin-bottom: 5px; /* Slightly more spacing */
+        }
+        
+        .earnings-table,
+        .deductions-table,
+        .net-pay-table {
+            font-size: 14px; /* Increased from 11px */
+        }
+        
+        .earnings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            font-size: 12px; /* Increased from 9px */
+        }
+        
+        .earnings-table th,
+        .earnings-table td {
+            text-align: right;
+            padding: 1px 4px;
+            vertical-align: top;
+        }
+        
+        .earnings-table th:first-child,
+        .earnings-table td:first-child {
+            text-align: left;
+        }
+        
+        .gross-pay-row {
+    background: white radial-gradient(circle at 2px 2px, black 0.8px, transparent 0.8px);
+    background-size: 4px 4px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+        
+        .deductions-table {
+            width: 300px;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            font-size: 12px; /* Increased from 9px */
+        }
+        
+        .deductions-table th,
+        .deductions-table td {
+            text-align: right;
+            padding: 1px 4px;
+            vertical-align: top;
+        }
+        
+        .deductions-table th:first-child,
+        .deductions-table td:first-child {
+            text-align: left;
+        }
+        
+        .net-pay-table {
+            width: 300px;
+            border-collapse: collapse;
+            font-size: 12px; /* Increased from 9px */
+        }
+        
+        .net-pay-table td {
+            padding: 1px 4px;
+            vertical-align: top;
+        }
+        
+        .net-pay-table td:first-child {
+            text-align: left;
+        }
+        
+        .net-pay-table td:nth-child(2),
+        .net-pay-table td:nth-child(3) {
+            text-align: right;
+        }
+        
+        .net-pay-row {
+            background: #d3d3d3;
+            border-top: 1px;
+            solid;
+            1px;
+            #000;
+            border-bottom:;
+        }
+        
+        .net-cheque-row {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+        
+        .benefits-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px; /* Increased from 9px */
+        }
+        
+        .benefits-table td {
+            padding: 1px 4px;
+            vertical-align: top;
+        }
+        
+        .benefits-table td:first-child {
+            text-align: left;
+        }
+        
+        .benefits-table td:nth-child(2),
+        .benefits-table td:nth-child(3) {
+            text-align: right;
+        }
+        
+        .watermark {
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            transform: rotate(-20deg);
+            font-size: 36px;
+            font-weight: bold;
+            color: rgba(180, 180, 180, 0.4);
+            z-index: 1;
+            font-family: Arial, sans-serif;
+        }
+        
+            .deposit-logo {
+            width: 60px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px; /* Increased from 8px */
+            margin-right: 20px;
+            color: white;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+        
+        .deposit-company-info {
+            font-size: 11px; /* Increased from 9px */
+            line-height: 1.1;
+        }
+        
+        .deposit-advice {
+            text-align: right;
+            font-size: 12px; /* Increased from 10px */
+            line-height: 1.3;
+        }
+        
+        .deposit-details {
+            font-size: 11px;
+            margin: 10px 0;
+            line-height: 1.4;
+            position: relative;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        
+        .deposit-header-line {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .deposit-header-line span {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .deposit-header-line span:last-child {
+            text-align: right;
+        }
+        
+        .deposit-header-underline {
+            height: 1px;
+            background-color: #000;
+            margin: 5px 0 10px 0;
+        }
+        
+        .deposit-account-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .deposit-account-info span {
+            flex: 1;
+            text-align: left;
+        }
+
+        .deposit-account-info span:last-child {
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        .deposit-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px; /* Increased from 0px; */
+            margin: 5px 0;
+            10px;
+        }
+        
+        .deposit-table th,
+        .deposit-table td {
+            text-align: left;
+            padding: 0px;
+            3px;
+            vertical-align: top;
+        }
+        
+        .deposit-table th:last-child td,
+        .deposit-table td:last-child {
+            text-align: right;
+        }
+        
+        .bank-info {
+            font-size: 11px; /* Increased from 9px */
+            margin: 15px 0;
+            0;
+            line-height: 1.4;
+        }
+        
+        /* Style for specific calculation cells that need highlighting */
+  
+        
+        /* Style for "Not a cheque" indication */
+        .not-a-cheque {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 36px;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.25);
+            border: 3px solid rgba(0, 0, 0, 0.25);
+            padding: 10px 30px;
+            text-transform: uppercase;
+            z-index: 100;
+            font-family: Arial, sans-serif;
+            white-space: nowrap;
+            letter-spacing: 4px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .deposit-section {
+            position: relative;
+        }
+        
+        /* Diagonal slashed line for the deposit section */
+     
+        
+       
+    </style>
+</head>
+<body>
+    <!-- February 2025 PAYSLIP -->
+    <div class="payslip-container">
+        <div class="header-section">
+            <div class="top-row">
+                <div class="header-codes">
+                    CO.    FILE    DEPT.    CLOCK    VCHR.  NO.    001    
+                    NEX    001001    IT        1
+                </div>
+                <div class="earnings-statement">
+                    Earnings Statement
+                </div>
+            </div>
+            
+            <div class="company-row">
+                <div class="company-section">
+                    <div class="logo-placeholder" style="width: 100%; max-width: 80px; height: auto;">
+                        <img
+                          src="https://nexglobetechnologies.com/wp-content/uploads/2024/01/Screenshot_12-removebg-preview-2.png"
+                          style="width: 80px; height: auto; filter: grayscale(100%); display: block; object-fit: contain;"
+                          alt="Logo"
+                        />
+                      </div>
+
+                    <div class="company-info">
+                        <div class="company-name">Nexglobe Technologies</div>
+                        <div>73 Water St North, Suite 300 Cambridge, Ontario N1R 7L6, Canada</div>
+                        <div>info@nexglobetechnologies.com</div>
+                        <div>+1 (418) 557-3838</div>
+                    </div>
+                </div>
+                
+                <div class="period-dates-table">
+                    <table>
+                        <tr>
+                            <td>Period Beginning:</td>
+                            <td>10-01-2024</td>
+                        </tr>
+                        <tr>
+                            <td>Period Ending:</td>
+                            <td>10-31-2024</td>
+                        </tr>
+                        <tr>
+                            <td>Pay Date:</td>
+                            <td>10-31-2024</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+            <div class="employee-section">
+                <div class="exemptions">
+                    Exemptions/Allowances:
+                    <br>
+                        <td>    Federal:      <span class="highlight-bg">-</span>
+                    <td>    Provincial:   <span class="highlight-bg">-</span>
+                </td>
+                </div>
+                <div class="employee-info">
+                    <div class="employee-name">SHIVARAMA KRISHNA SANGEKARI</div>
+                    <div>5868 Ladyburn Crescent Mississauga, ON L5M 4V2</div>
+                </div>
+            </div>
+        
+            <div class="main-content">
+                <div class="left-section">
+                    <div class="section-title">Earnings</div>
+                    <table class="earnings-table">
+                        <tr>
+                            <th></th>
+                            <th>rate</th>
+                            <th>hours</th>
+                            <th>this period</th>
+                            <th>year to date</th>
+                        </tr>
+                        <tr>
+                            <td>Regular Salary</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td class="highlight-cell">$3,500.00</td>
+                            <td class="highlight-cell">$3,500.00</td>
+                        </tr>
+                        <tr class="gross-pay-row">
+                            <td><strong>Gross Pay</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong class="highlight-bg">$3,500.00</strong></td>
+                            <td><strong class="highlight-bg">$3,500.00</strong></td>
+                        </tr>
+                </table>
+
+                    <div style="padding-top: 2rem!important;" class="section-title">Deductions</div>
+                    <table class="deductions-table">
+                        <tr>
+                            <th>Statutory</th>
+                            <th>this period</th>
+                            <th>year to date</th>
+                        </tr>
+                        <tr>
+                            <td>Federal Tax</td>
+                            <td class="highlight-cell">-$273.43</td>
+                            <td class="highlight-cell">$273.43</td>
+                        </tr>
+                        <tr>
+                            <td>Provincial Tax</td>
+                            <td class="highlight-cell">-$149.50</td>
+                            <td class="highlight-cell">$149.50</td>
+                        </tr>
+                        <tr>
+                            <td>EI</td>
+                            <td class="highlight-cell">-$58.10</td>
+                            <td class="highlight-cell">$58.10</td>
+                        </tr>
+                        <tr>
+                            <td>CPP</td>
+                            <td class="highlight-cell">-$190.90</td>
+                            <td class="highlight-cell">$190.90</td>
+                        </tr>
+                    </table>
+
+                    <table class="net-pay-table">
+                        <tr class="net-pay-row">
+                            <td><strong>Net Pay</strong></td>
+                            <td><strong class="highlight-bg">$2,828.07</strong></td>
+                            <td><strong class="highlight-bg">$2,828.07</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Primary Deposit</td>
+                            <td class="highlight-cell">$0.00</td>
+                            <td class="highlight-cell">$0.00</td>
+                        </tr>
+                        <tr class="net-cheque-row">
+                            <td><strong>Net Cheque</strong></td>
+                            <td><strong class="highlight-bg">$2,828.07</strong></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            
+                <div class="right-section">
+                    <div class="section-title">Other Benefits and Information</div>
+                </div>
+            </div>
+        
+            <div class="deposit-section">
+                <div class="not-a-cheque">NOT A CHEQUE</div>
+                <div class="deposit-header">
+                    <div class="deposit-company">
+                        <div class="deposit-logo" style="width: 100%; max-width: 80px; height: auto;">
+                            <img
+                              src="https://nexglobetechnologies.com/wp-content/uploads/2024/01/Screenshot_12-removebg-preview-2.png"
+                              style="width: 80px; height: auto; filter: grayscale(100%); display: block; object-fit: contain;"
+                              alt="Logo"
+                            />
+                          </div>
+                        <div class="deposit-company-info">
+                            <div class="company-name">Nexglobe Technologies</div>
+                            <div>73 Water St North, Suite 300 Cambridge, Ontario N1R 7L6, Canada</div>
+                            <div>info@nexglobetechnologies.com</div>
+                            <div>+1 (418) 557-3838</div>
+                        </div>
+                    </div>
+                
+                </div>
+            
+                <div class="deposit-details">
+                    <div class="deposit-header-line">
+                        <span>Deposited from the account of</span>
+                        <span>account number</span>
+                        <span>bank/transit No.</span>
+                        <span>amount</span>
+                    </div>
+                    <div class="deposit-header-underline"></div>
+                    <div class="deposit-account-info">
+                        <span>Nexglobe Technologies</span>
+                        <span>*****8224</span>
+                        <span>***351</span>
+                        <span>$2,828.07</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- November 2024 PAYSLIP -->
+    <div class="payslip-container">
+        <div class="header-section">
+            <div class="top-row">
+                <div class="header-codes">
+                    CO.    FILE    DEPT.    CLOCK    VCHR.  NO.    001    
+                    NEX    001001    IT        1
+                </div>
+                <div class="earnings-statement">
+                    Earnings Statement
+                </div>
+            </div>
+            
+            <div class="company-row">
+                <div class="company-section">
+                    <div class="logo-placeholder" style="width: 100%; max-width: 80px; height: auto;">
+                        <img 
+                          src="https://nexglobetechnologies.com/wp-content/uploads/2024/01/Screenshot_12-removebg-preview-2.png" 
+                          style="width: 80px; height: auto; filter: grayscale(100%); display: block; object-fit: contain;" 
+                          alt="Logo"
+                        />
+                      </div>
+                    <div class="company-info">
+                        <div class="company-name">Nexglobe Technologies</div>
+                        <div>73 Water St North, Suite 300 Cambridge, Ontario N1R 7L6, Canada</div>
+                        <div>info@nexglobetechnologies.com</div>
+                        <div>+1 (418) 557-3838</div>
+                    </div>
+                </div>
+                
+                <div class="period-dates-table">
+                    <table>
+                        <tr>
+                            <td>Period Beginning:</td>
+                            <td>11-01-2024</td>
+                        </tr>
+                        <tr>
+                            <td>Period Ending:</td>
+                            <td>11-30-2024</td>
+                        </tr>
+                        <tr>
+                            <td>Pay Date:</td>
+                            <td>11-30-2024</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="employee-section">
+            <div class="exemptions">
+                Exemptions/Allowances:<br>
+                    Federal:      <span class="highlight-bg">-</span><br>
+                    Provincial:   <span class="highlight-bg">-</span>
+            </div>
+            <div class="employee-info">
+                <div class="employee-name">SHIVARAMA KRISHNA SANGEKARI</div>
+                <div>5868 Ladyburn Crescent Mississauga, ON L5M 4V2</div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="left-section">
+                <div class="section-title">Earnings</div>
+                <table class="earnings-table">
+                    <tr>
+                        <th></th>
+                        <th>rate</th>
+                        <th>hours</th>
+                        <th>this period</th>
+                        <th>year to date</th>
+                    </tr>
+                    <tr>
+                        <td>Regular Salary</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="highlight-cell">$3,500.00</td>
+                        <td class="highlight-cell">$7,000.00</td>
+                    </tr>
+                    <tr class="gross-pay-row">
+                        <td><strong>Gross Pay</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong class="highlight-bg">$3,500.00</strong></td>
+                        <td><strong class="highlight-bg">$7,000.00</strong></td>
+                    </tr>
+                </table>
+
+                <div style="padding-top: 2rem!important;" class="section-title">Deductions</div>
+                <table class="deductions-table">
+                    <tr>
+                        <th>Statutory</th>
+                        <th>this period</th>
+                        <th>year to date</th>
+                    </tr>
+                    <tr>
+                        <td>Federal Tax</td>
+                        <td class="highlight-cell">-$273.43</td>
+                        <td class="highlight-cell">$546.86</td>
+                    </tr>
+                    <tr>
+                        <td>Provincial Tax</td>
+                        <td class="highlight-cell">-$149.50</td>
+                        <td class="highlight-cell">$299.00</td>
+                    </tr>
+                    <tr>
+                        <td>EI</td>
+                        <td class="highlight-cell">-$58.10</td>
+                        <td class="highlight-cell">$116.20</td>
+                    </tr>
+                    <tr>
+                        <td>CPP</td>
+                        <td class="highlight-cell">-$190.90</td>
+                        <td class="highlight-cell">$381.80</td>
+                    </tr>
+                </table>
+
+                <table class="net-pay-table">
+                    <tr class="net-pay-row">
+                        <td><strong>Net Pay</strong></td>
+                        <td><strong class="highlight-bg">$2,828.07</strong></td>
+                        <td><strong class="highlight-bg">$5,656.14</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Primary Deposit</td>
+                        <td class="highlight-cell">$0.00</td>
+                        <td class="highlight-cell">$0.00</td>
+                    </tr>
+                    <tr class="net-cheque-row">
+                        <td><strong>Net Cheque</strong></td>
+                        <td><strong class="highlight-bg">$2,828.07</strong></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="right-section">
+                <div class="section-title">Other Benefits and Information</div>
+            </div>
+        </div>
+        
+        <div class="deposit-section">
+            <div class="not-a-cheque">NOT A CHEQUE</div>
+            <div class="deposit-header">
+                <div class="deposit-company">
+                    <div class="deposit-logo" style="width: 100%; max-width: 80px; height: auto;">
+                        <img 
+                          src="https://nexglobetechnologies.com/wp-content/uploads/2024/01/Screenshot_12-removebg-preview-2.png" 
+                          style="width: 80px; height: auto; filter: grayscale(100%); display: block; object-fit: contain;" 
+                          alt="Logo"
+                        />
+                      </div>
+                    <div class="deposit-company-info">
+                        <div class="company-name">Nexglobe Technologies</div>
+                        <div>73 Water St North, Suite 300 Cambridge, Ontario N1R 7L6, Canada</div>
+                        <div>info@nexglobetechnologies.com</div>
+                        <div>+1 (418) 557-3838</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="deposit-details">
+                <div class="deposit-header-line">
+                    <span>Deposited from the account of</span>
+                    <span>account number</span>
+                    <span>bank/transit No.</span>
+                    <span>amount</span>
+                </div>
+                <div class="deposit-header-underline"></div>
+                <div class="deposit-account-info">
+                    <span>Nexglobe Technologies</span>
+                    <span>*****8224</span>
+                    <span>***351</span>
+                    <span>$2,828.07</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- December 2024 PAYSLIP -->
+    <div class="payslip-container">
+        <div class="header-section">
+            <div class="top-row">
+                <div class="header-codes">
+                    CO.    FILE    DEPT.    CLOCK    VCHR.  NO.    001    
+                    NEX    001001    IT        1
+                </div>
+                <div class="earnings-statement">
+                    Earnings Statement
+                </div>
+            </div>
+            
+            <div class="company-row">
+                <div class="company-section">
+                    <div class="logo-placeholder" style="width: 100%; max-width: 80px; height: auto;">
+                        <img 
+                          src="https://nexglobetechnologies.com/wp-content/uploads/2024/01/Screenshot_12-removebg-preview-2.png" 
+                          style="width: 80px; height: auto; filter: grayscale(100%); display: block; object-fit: contain;" 
+                          alt="Logo"
+                        />
+                      </div>
+                    <div class="company-info">
+                        <div class="company-name">Nexglobe Technologies</div>
+                        <div>73 Water St North, Suite 300 Cambridge, Ontario N1R 7L6, Canada</div>
+                        <div>info@nexglobetechnologies.com</div>
+                        <div>+1 (418) 557-3838</div>
+                    </div>
+                </div>
+                
+                <div class="period-dates-table">
+                    <table>
+                        <tr>
+                            <td>Period Beginning:</td>
+                            <td>12-01-2024</td>
+                        </tr>
+                        <tr>
+                            <td>Period Ending:</td>
+                            <td>12-31-2024</td>
+                        </tr>
+                        <tr>
+                            <td>Pay Date:</td>
+                            <td>12-31-2024</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="employee-section">
+            <div class="exemptions">
+                Exemptions/Allowances:<br>
+                    Federal:      <span class="highlight-bg">-</span><br>
+                    Provincial:   <span class="highlight-bg">-</span>
+            </div>
+            <div class="employee-info">
+                <div class="employee-name">SHIVARAMA KRISHNA SANGEKARI</div>
+                <div>5868 Ladyburn Crescent Mississauga, ON L5M 4V2</div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="left-section">
+                <div class="section-title">Earnings</div>
+                <table class="earnings-table">
+                    <tr>
+                        <th></th>
+                        <th>rate</th>
+                        <th>hours</th>
+                        <th>this period</th>
+                        <th>year to date</th>
+                    </tr>
+                    <tr>
+                        <td>Regular Salary</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="highlight-cell">$3,500.00</td>
+                        <td class="highlight-cell">$10,500.00</td>
+                    </tr>
+                    <tr class="gross-pay-row">
+                        <td><strong>Gross Pay</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong class="highlight-bg">$3,500.00</strong></td>
+                        <td><strong class="highlight-bg">$10,500.00</strong></td>
+                    </tr>
+                </table>
+
+                <div style="padding-top: 2rem!important;" class="section-title">Deductions</div>
+                <table class="deductions-table">
+                    <tr>
+                        <th>Statutory</th>
+                        <th>this period</th>
+                        <th>year to date</th>
+                    </tr>
+                    <tr>
+                        <td>Federal Tax</td>
+                        <td class="highlight-cell">-$273.43</td>
+                        <td class="highlight-cell">$820.29</td>
+                    </tr>
+                    <tr>
+                        <td>Provincial Tax</td>
+                        <td class="highlight-cell">-$149.50</td>
+                        <td class="highlight-cell">$448.50</td>
+                    </tr>
+                    <tr>
+                        <td>EI</td>
+                        <td class="highlight-cell">-$58.10</td>
+                        <td class="highlight-cell">$174.30</td>
+                    </tr>
+                    <tr>
+                        <td>CPP</td>
+                        <td class="highlight-cell">-$190.90</td>
+                        <td class="highlight-cell">$572.70</td>
+                    </tr>
+                </table>
+
+                <table class="net-pay-table">
+                    <tr class="net-pay-row">
+                        <td><strong>Net Pay</strong></td>
+                        <td><strong class="highlight-bg">$2,828.07</strong></td>
+                        <td><strong class="highlight-bg">$8,484.21</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Primary Deposit</td>
+                        <td class="highlight-cell">$0.00</td>
+                        <td class="highlight-cell">$0.00</td>
+                    </tr>
+                    <tr class="net-cheque-row">
+                        <td><strong>Net Cheque</strong></td>
+                        <td><strong class="highlight-bg">$2,828.07</strong></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="right-section">
+                <div class="section-title">Other Benefits and Information</div>
+            </div>
+        </div>
+        
+        <div class="deposit-section">
+            <div class="not-a-cheque">NOT A CHEQUE</div>
+            <div class="deposit-header">
+                <div class="deposit-company">
+                    <div class="deposit-logo" style="width: 100%; max-width: 80px; height: auto;">
+                        <img 
+                          src="https://nexglobetechnologies.com/wp-content/uploads/2024/01/Screenshot_12-removebg-preview-2.png" 
+                          style="width: 80px; height: auto; filter: grayscale(100%); display: block; object-fit: contain;" 
+                          alt="Logo"
+                        />
+                      </div>
+                    <div class="deposit-company-info">
+                        <div class="company-name">Nexglobe Technologies</div>
+                        <div>73 Water St North, Suite 300 Cambridge, Ontario N1R 7L6, Canada</div>
+                        <div>info@nexglobetechnologies.com</div>
+                        <div>+1 (418) 557-3838</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="deposit-details">
+                <div class="deposit-header-line">
+                    <span>Deposited from the account of</span>
+                    <span>account number</span>
+                    <span>bank/transit No.</span>
+                    <span>amount</span>
+                </div>
+                <div class="deposit-header-underline"></div>
+                <div class="deposit-account-info">
+                    <span>Nexglobe Technologies</span>
+                    <span>*****8224</span>
+                    <span>***351</span>
+                    <span>$2,828.07</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

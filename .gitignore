@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+package-lock.json
+# Environment variables
+.env
+frontend/
+# Windows artifacts
+nul
+# Test files
+test-login.json
+

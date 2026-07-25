@@ -1,0 +1,944 @@
+{
+  "timestamp": "2025-11-30T09:58:04.894Z",
+  "totalRequests": 92,
+  "formSubmissions": [
+    {
+      "url": "https://canada.tt.omtrdc.net/rest/v1/delivery?client=canada&sessionId=5d809bd421514f7fad52dcb653f886c4&version=2.11.4",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "referer": "https://apps.cra-arc.gc.ca/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "text/plain",
+        "accept": "*/*",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"requestId\":\"b9b348f118f4456592b2cb7a1cd8f272\",\"context\":{\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\",\"clientHints\":{\"mobile\":false,\"platform\":\"\",\"browserUAWithMajorVersion\":\"\"},\"timeOffsetInMinutes\":330,\"channel\":\"web\",\"screen\":{\"width\":1536,\"height\":864,\"orientation\":\"portrait\",\"colorDepth\":24,\"pixelRatio\":1.0000000149011612},\"window\":{\"width\":800,\"height\":600},\"browser\":{\"host\":\"apps.cra-arc.gc.ca\",\"webGLRenderer\":\"ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)\"},\"address\":{\"url\":\"https://apps.cra-arc.gc.ca/ebci/rhpd/beta/\",\"referringUrl\":\"\"}},\"id\":{\"marketingCloudVisitorId\":\"48259288252437614623708423637571956300\"},\"experienceCloud\":{\"audienceManager\":{\"locationHint\":12,\"blob\":\"6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y\"},\"analytics\":{\"logging\":\"server_side\",\"supplementalDataId\":\"08183C2FB7CB2229-3DB126257B80E3FF\",\"trackingServer\":\"canada.sc.omtrdc.net\",\"trackingServerSecure\":\"canada.sc.omtrdc.net\"}},\"execute\":{\"pageLoad\":{}},\"prefetch\":{\"views\":[{}]}}",
+      "timestamp": "2025-11-30T09:57:19.174Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/log/noop",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; TS01338dea=01450b64502c9cc7ef929916deb1ddd5a6565b3a000e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a27f154f71cf7f8b071e36be1d4153f80e6; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; TS8606329d027=0864106fd4ab2000407f15e9a0c46cc8955fdbfd330e417378451bf961dac17a5d3e8fc13b658061084daefa6e1130002f8e6f64ff728c6eb39d4c3d0ad3881e97e682188ffd00c881d51c4046bdebd842dd326c327ea310838c5df3f6362d6b",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{}",
+      "timestamp": "2025-11-30T09:57:25.360Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/validateGeneralData",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step1",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1814; s_ppv=Salary%2520calculation%2C33%2C33%2C33%2C600%2C3%2C1; TS8606329d027=0864106fd4ab20008118ad51a8c2caf1e721017baced5b2c31ce6bfcaf964482d1afba3f6d3a6d560810c1c480113000c8523316c22f71600c372e817d1278f4169802c592605de8b2038d8ea967ce283636094b33e9a3d40cdbad8291879f0b",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":false,\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\"}",
+      "timestamp": "2025-11-30T09:57:50.254Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimAmounts",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step2",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1; TS8606329d027=0864106fd4ab200003a26b28d916d891f7a4460ab51e80a45e5ffa8e117aaf9ad2be4d0966c3e4cd0803072c8a113000c897b485bf5b64f7e8377d4f11f42714ffe3ab396b9c9a8520f0248268da4c4e5a04bfe22080c53b413557afeb45838e",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false}",
+      "timestamp": "2025-11-30T09:57:57.739Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimCodes",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1; TS8606329d027=0864106fd4ab20003b2825acbb921231f707a933b2deb0498b0b96fdfaaf98852f4525bc04e46db908847e1f5811300005d66c5853d95482a6ed1f062be115b25728c637972aa76a8a1b0137cc8895f5a9101ef1c07ef4e4e4d11e96fa5d4438",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747}",
+      "timestamp": "2025-11-30T09:57:58.719Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimCodes",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1; TS8606329d027=0864106fd4ab20003b2825acbb921231f707a933b2deb0498b0b96fdfaaf98852f4525bc04e46db908847e1f5811300005d66c5853d95482a6ed1f062be115b25728c637972aa76a8a1b0137cc8895f5a9101ef1c07ef4e4e4d11e96fa5d4438",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747}",
+      "timestamp": "2025-11-30T09:57:58.720Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/validate",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab20003b2825acbb921231f707a933b2deb0498b0b96fdfaaf98852f4525bc04e46db908847e1f5811300005d66c5853d95482a6ed1f062be115b25728c637972aa76a8a1b0137cc8895f5a9101ef1c07ef4e4e4d11e96fa5d4438; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:57:59.585Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimCodes",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab20005b62a412c2f3840493395b73d357a2e4935ab8edc369451b533ae022afc6338f08cadc0e71113000de371c9c59648d888c36a44747714be102eb71629dd9765a8d35d36b4c5c86ab1d0ed07008631d21f21d9501bc510537",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:01.318Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/isFedProvTaxExemptDisplay",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab20005b62a412c2f3840493395b73d357a2e4935ab8edc369451b533ae022afc6338f08cadc0e71113000de371c9c59648d888c36a44747714be102eb71629dd9765a8d35d36b4c5c86ab1d0ed07008631d21f21d9501bc510537",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:01.319Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculate",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab20005b62a412c2f3840493395b73d357a2e4935ab8edc369451b533ae022afc6338f08cadc0e71113000de371c9c59648d888c36a44747714be102eb71629dd9765a8d35d36b4c5c86ab1d0ed07008631d21f21d9501bc510537",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:01.320Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimCodes",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/results",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab2000ece54efda3b25af44f8afb84e12bf0c074501cef279dce45e82b49fb51cddb9f0825cbadc21130000bc24c68d5e0f43e10cfc6ce1241267fa751d77577ed8f92c35a8fb3aa39f1e606b13259316d2df9128d90496bd899dd",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:02.919Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimCodes",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/results",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab2000ece54efda3b25af44f8afb84e12bf0c074501cef279dce45e82b49fb51cddb9f0825cbadc21130000bc24c68d5e0f43e10cfc6ce1241267fa751d77577ed8f92c35a8fb3aa39f1e606b13259316d2df9128d90496bd899dd",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:02.920Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateResultClaimCode",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/results",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab2000ece54efda3b25af44f8afb84e12bf0c074501cef279dce45e82b49fb51cddb9f0825cbadc21130000bc24c68d5e0f43e10cfc6ce1241267fa751d77577ed8f92c35a8fb3aa39f1e606b13259316d2df9128d90496bd899dd",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:02.921Z"
+    }
+  ],
+  "allRequests": [
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/",
+      "method": "GET",
+      "resourceType": "document",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+      },
+      "timestamp": "2025-11-30T09:57:15.980Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/styles-XQTNYRBV.css",
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "headers": {
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "accept": "text/css,*/*;q=0.1",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; TS01338dea=01450b64502c9cc7ef929916deb1ddd5a6565b3a000e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a27f154f71cf7f8b071e36be1d4153f80e6; TS8606329d027=0864106fd4ab20004d6a1f6d37c62c077ee39548bc57aa6a8c4b25fc8bdcd89342cc011e8811ed2f08dcd2ed8c1130004d450afa6b5d4b9aaaff53e5dfe47923137723b32fb97ca2636d8fe9bb9db88fb4906d9473f2e9a6e0876c3c0780aa35"
+      },
+      "timestamp": "2025-11-30T09:57:17.520Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/polyfills-F22GSW24.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/",
+        "origin": "https://apps.cra-arc.gc.ca",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "accept": "*/*",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; TS01338dea=01450b64502c9cc7ef929916deb1ddd5a6565b3a000e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a27f154f71cf7f8b071e36be1d4153f80e6; TS8606329d027=0864106fd4ab20004d6a1f6d37c62c077ee39548bc57aa6a8c4b25fc8bdcd89342cc011e8811ed2f08dcd2ed8c1130004d450afa6b5d4b9aaaff53e5dfe47923137723b32fb97ca2636d8fe9bb9db88fb4906d9473f2e9a6e0876c3c0780aa35"
+      },
+      "timestamp": "2025-11-30T09:57:17.522Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/main-BFSV2S2S.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/",
+        "origin": "https://apps.cra-arc.gc.ca",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "accept": "*/*",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; TS01338dea=01450b64502c9cc7ef929916deb1ddd5a6565b3a000e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a27f154f71cf7f8b071e36be1d4153f80e6; TS8606329d027=0864106fd4ab20004d6a1f6d37c62c077ee39548bc57aa6a8c4b25fc8bdcd89342cc011e8811ed2f08dcd2ed8c1130004d450afa6b5d4b9aaaff53e5dfe47923137723b32fb97ca2636d8fe9bb9db88fb4906d9473f2e9a6e0876c3c0780aa35"
+      },
+      "timestamp": "2025-11-30T09:57:17.523Z"
+    },
+    {
+      "url": "https://canada.tt.omtrdc.net/rest/v1/delivery?client=canada&sessionId=5d809bd421514f7fad52dcb653f886c4&version=2.11.4",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "referer": "https://apps.cra-arc.gc.ca/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "text/plain",
+        "accept": "*/*",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"requestId\":\"b9b348f118f4456592b2cb7a1cd8f272\",\"context\":{\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\",\"clientHints\":{\"mobile\":false,\"platform\":\"\",\"browserUAWithMajorVersion\":\"\"},\"timeOffsetInMinutes\":330,\"channel\":\"web\",\"screen\":{\"width\":1536,\"height\":864,\"orientation\":\"portrait\",\"colorDepth\":24,\"pixelRatio\":1.0000000149011612},\"window\":{\"width\":800,\"height\":600},\"browser\":{\"host\":\"apps.cra-arc.gc.ca\",\"webGLRenderer\":\"ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)\"},\"address\":{\"url\":\"https://apps.cra-arc.gc.ca/ebci/rhpd/beta/\",\"referringUrl\":\"\"}},\"id\":{\"marketingCloudVisitorId\":\"48259288252437614623708423637571956300\"},\"experienceCloud\":{\"audienceManager\":{\"locationHint\":12,\"blob\":\"6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y\"},\"analytics\":{\"logging\":\"server_side\",\"supplementalDataId\":\"08183C2FB7CB2229-3DB126257B80E3FF\",\"trackingServer\":\"canada.sc.omtrdc.net\",\"trackingServerSecure\":\"canada.sc.omtrdc.net\"}},\"execute\":{\"pageLoad\":{}},\"prefetch\":{\"views\":[{}]}}",
+      "timestamp": "2025-11-30T09:57:19.174Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/log/cfg",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; TS01338dea=01450b64502c9cc7ef929916deb1ddd5a6565b3a000e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a27f154f71cf7f8b071e36be1d4153f80e6; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; TS8606329d027=0864106fd4ab2000407f15e9a0c46cc8955fdbfd330e417378451bf961dac17a5d3e8fc13b658061084daefa6e1130002f8e6f64ff728c6eb39d4c3d0ad3881e97e682188ffd00c881d51c4046bdebd842dd326c327ea310838c5df3f6362d6b"
+      },
+      "timestamp": "2025-11-30T09:57:25.359Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/log/noop",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; TS01338dea=01450b64502c9cc7ef929916deb1ddd5a6565b3a000e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a27f154f71cf7f8b071e36be1d4153f80e6; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; TS8606329d027=0864106fd4ab2000407f15e9a0c46cc8955fdbfd330e417378451bf961dac17a5d3e8fc13b658061084daefa6e1130002f8e6f64ff728c6eb39d4c3d0ad3881e97e682188ffd00c881d51c4046bdebd842dd326c327ea310838c5df3f6362d6b",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{}",
+      "timestamp": "2025-11-30T09:57:25.360Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/assets/i18n/en.json",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab2000998f100495bd8ea336c8d22805f5b45f7e73d674b9510a5c0c025538d5dfae09080a480c98113000a65180af20bc67fa607633a8156231dec2b646de1733850849622b7e6b29419216b377776c6b61d4c9e2192d951e35cb"
+      },
+      "timestamp": "2025-11-30T09:57:26.951Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/links/undefined",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab2000998f100495bd8ea336c8d22805f5b45f7e73d674b9510a5c0c025538d5dfae09080a480c98113000a65180af20bc67fa607633a8156231dec2b646de1733850849622b7e6b29419216b377776c6b61d4c9e2192d951e35cb"
+      },
+      "timestamp": "2025-11-30T09:57:26.951Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/links/en",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/entry",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab2000998f100495bd8ea336c8d22805f5b45f7e73d674b9510a5c0c025538d5dfae09080a480c98113000a65180af20bc67fa607633a8156231dec2b646de1733850849622b7e6b29419216b377776c6b61d4c9e2192d951e35cb"
+      },
+      "timestamp": "2025-11-30T09:57:26.998Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/links/en",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/entry",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab2000998f100495bd8ea336c8d22805f5b45f7e73d674b9510a5c0c025538d5dfae09080a480c98113000a65180af20bc67fa607633a8156231dec2b646de1733850849622b7e6b29419216b377776c6b61d4c9e2192d951e35cb"
+      },
+      "timestamp": "2025-11-30T09:57:26.998Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/links/en",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/entry",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab2000998f100495bd8ea336c8d22805f5b45f7e73d674b9510a5c0c025538d5dfae09080a480c98113000a65180af20bc67fa607633a8156231dec2b646de1733850849622b7e6b29419216b377776c6b61d4c9e2192d951e35cb"
+      },
+      "timestamp": "2025-11-30T09:57:26.998Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getdisplaynewversionmessageuntil",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/entry",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab2000998f100495bd8ea336c8d22805f5b45f7e73d674b9510a5c0c025538d5dfae09080a480c98113000a65180af20bc67fa607633a8156231dec2b646de1733850849622b7e6b29419216b377776c6b61d4c9e2192d951e35cb"
+      },
+      "timestamp": "2025-11-30T09:57:26.999Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getutmessagedisplayable",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/entry",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab2000998f100495bd8ea336c8d22805f5b45f7e73d674b9510a5c0c025538d5dfae09080a480c98113000a65180af20bc67fa607633a8156231dec2b646de1733850849622b7e6b29419216b377776c6b61d4c9e2192d951e35cb"
+      },
+      "timestamp": "2025-11-30T09:57:26.999Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getutmessageinternalversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/entry",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab2000998f100495bd8ea336c8d22805f5b45f7e73d674b9510a5c0c025538d5dfae09080a480c98113000a65180af20bc67fa607633a8156231dec2b646de1733850849622b7e6b29419216b377776c6b61d4c9e2192d951e35cb"
+      },
+      "timestamp": "2025-11-30T09:57:27.000Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getappversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/entry",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab2000998f100495bd8ea336c8d22805f5b45f7e73d674b9510a5c0c025538d5dfae09080a480c98113000a65180af20bc67fa607633a8156231dec2b646de1733850849622b7e6b29419216b377776c6b61d4c9e2192d951e35cb"
+      },
+      "timestamp": "2025-11-30T09:57:27.000Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getdeployidversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/entry",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_tp=600; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C100%2C100%2C100%2C600%2C1%2C1; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab2000998f100495bd8ea336c8d22805f5b45f7e73d674b9510a5c0c025538d5dfae09080a480c98113000a65180af20bc67fa607633a8156231dec2b646de1733850849622b7e6b29419216b377776c6b61d4c9e2192d951e35cb"
+      },
+      "timestamp": "2025-11-30T09:57:27.000Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/supportedYearList",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/entry",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab200028f8fdfec48a651e38754badef8229407775b3e7326fe638adcd92318f9142fa0831cb2d7e1130000adbf228657f7ee0e8108274f207120ea72ba49e71149c66557bfea3b0231139dce655061ec88953faa6ce7a1d5a7320; s_tp=1658; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C36%2C36%2C36%2C600%2C2%2C1"
+      },
+      "timestamp": "2025-11-30T09:57:36.647Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/supportedPayPeriodFrequencyList",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step1",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1658; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C36%2C36%2C36%2C600%2C2%2C1; TS8606329d027=0864106fd4ab200005e3471ce8298b64cea4aa92b9611ca702efda8b3d359ae3b2c25efb3cbc036c08c5048ddb113000ca92ac5ee1372ede3ce449df052d2b1633f25a917b7b6073b39a5e5c2ec0872c8fc447c5f04cc4f8cf1472fb63346b89"
+      },
+      "timestamp": "2025-11-30T09:57:38.248Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getutmessagedisplayable",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step1",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1658; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C36%2C36%2C36%2C600%2C2%2C1; TS8606329d027=0864106fd4ab200005e3471ce8298b64cea4aa92b9611ca702efda8b3d359ae3b2c25efb3cbc036c08c5048ddb113000ca92ac5ee1372ede3ce449df052d2b1633f25a917b7b6073b39a5e5c2ec0872c8fc447c5f04cc4f8cf1472fb63346b89"
+      },
+      "timestamp": "2025-11-30T09:57:38.248Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getutmessageinternalversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step1",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1658; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C36%2C36%2C36%2C600%2C2%2C1; TS8606329d027=0864106fd4ab200005e3471ce8298b64cea4aa92b9611ca702efda8b3d359ae3b2c25efb3cbc036c08c5048ddb113000ca92ac5ee1372ede3ce449df052d2b1633f25a917b7b6073b39a5e5c2ec0872c8fc447c5f04cc4f8cf1472fb63346b89"
+      },
+      "timestamp": "2025-11-30T09:57:38.249Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getappversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step1",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1658; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C36%2C36%2C36%2C600%2C2%2C1; TS8606329d027=0864106fd4ab200005e3471ce8298b64cea4aa92b9611ca702efda8b3d359ae3b2c25efb3cbc036c08c5048ddb113000ca92ac5ee1372ede3ce449df052d2b1633f25a917b7b6073b39a5e5c2ec0872c8fc447c5f04cc4f8cf1472fb63346b89"
+      },
+      "timestamp": "2025-11-30T09:57:38.249Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getdeployidversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step1",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1658; s_ppv=Payroll%2520Deductions%2520Online%2520Calculator%2C36%2C36%2C36%2C600%2C2%2C1; TS8606329d027=0864106fd4ab200005e3471ce8298b64cea4aa92b9611ca702efda8b3d359ae3b2c25efb3cbc036c08c5048ddb113000ca92ac5ee1372ede3ce449df052d2b1633f25a917b7b6073b39a5e5c2ec0872c8fc447c5f04cc4f8cf1472fb63346b89"
+      },
+      "timestamp": "2025-11-30T09:57:38.250Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/validateGeneralData",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step1",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1814; s_ppv=Salary%2520calculation%2C33%2C33%2C33%2C600%2C3%2C1; TS8606329d027=0864106fd4ab20008118ad51a8c2caf1e721017baced5b2c31ce6bfcaf964482d1afba3f6d3a6d560810c1c480113000c8523316c22f71600c372e817d1278f4169802c592605de8b2038d8ea967ce283636094b33e9a3d40cdbad8291879f0b",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":false,\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\"}",
+      "timestamp": "2025-11-30T09:57:50.254Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getutmessagedisplayable",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step2",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1814; s_ppv=Salary%2520calculation%2C33%2C33%2C33%2C600%2C3%2C1; TS8606329d027=0864106fd4ab200048eb9a2c9438df9fa595d595472a85201ef4574684bb9d62f37ed85897e1eefc08dfc2c6d611300058027ec7c8aa9fa32c4272fabef9cbc4b60b20d8c9a9cb3e01d9adc58de7d846ec44655f7549cd8907738e8176db0978"
+      },
+      "timestamp": "2025-11-30T09:57:51.845Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getutmessageinternalversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step2",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1814; s_ppv=Salary%2520calculation%2C33%2C33%2C33%2C600%2C3%2C1; TS8606329d027=0864106fd4ab200048eb9a2c9438df9fa595d595472a85201ef4574684bb9d62f37ed85897e1eefc08dfc2c6d611300058027ec7c8aa9fa32c4272fabef9cbc4b60b20d8c9a9cb3e01d9adc58de7d846ec44655f7549cd8907738e8176db0978"
+      },
+      "timestamp": "2025-11-30T09:57:51.846Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getappversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step2",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1814; s_ppv=Salary%2520calculation%2C33%2C33%2C33%2C600%2C3%2C1; TS8606329d027=0864106fd4ab200048eb9a2c9438df9fa595d595472a85201ef4574684bb9d62f37ed85897e1eefc08dfc2c6d611300058027ec7c8aa9fa32c4272fabef9cbc4b60b20d8c9a9cb3e01d9adc58de7d846ec44655f7549cd8907738e8176db0978"
+      },
+      "timestamp": "2025-11-30T09:57:51.847Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getdeployidversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step2",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1814; s_ppv=Salary%2520calculation%2C33%2C33%2C33%2C600%2C3%2C1; TS8606329d027=0864106fd4ab200048eb9a2c9438df9fa595d595472a85201ef4574684bb9d62f37ed85897e1eefc08dfc2c6d611300058027ec7c8aa9fa32c4272fabef9cbc4b60b20d8c9a9cb3e01d9adc58de7d846ec44655f7549cd8907738e8176db0978"
+      },
+      "timestamp": "2025-11-30T09:57:51.848Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/calculationRates/SALARY/ONTARIO/2025-01-31",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step2",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab2000fbf7c54d2ac3b6a322eb8ae502bf47e0f6e4be1cf4aa98aa6f9e06a17ba3d18e08a7af7719113000174abcabf9c0b2ecc9f5a2c0b0f1bd40c1caebd1c463c89ad52b7a39a1f9f46d2d3401a6448d4682ad3278cfd50967aa; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1"
+      },
+      "timestamp": "2025-11-30T09:57:56.248Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimAmounts",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step2",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1; TS8606329d027=0864106fd4ab200003a26b28d916d891f7a4460ab51e80a45e5ffa8e117aaf9ad2be4d0966c3e4cd0803072c8a113000c897b485bf5b64f7e8377d4f11f42714ffe3ab396b9c9a8520f0248268da4c4e5a04bfe22080c53b413557afeb45838e",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false}",
+      "timestamp": "2025-11-30T09:57:57.739Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimCodes",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1; TS8606329d027=0864106fd4ab20003b2825acbb921231f707a933b2deb0498b0b96fdfaaf98852f4525bc04e46db908847e1f5811300005d66c5853d95482a6ed1f062be115b25728c637972aa76a8a1b0137cc8895f5a9101ef1c07ef4e4e4d11e96fa5d4438",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747}",
+      "timestamp": "2025-11-30T09:57:58.719Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/calculationRates/SALARY/ONTARIO/2025-01-31",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1; TS8606329d027=0864106fd4ab20003b2825acbb921231f707a933b2deb0498b0b96fdfaaf98852f4525bc04e46db908847e1f5811300005d66c5853d95482a6ed1f062be115b25728c637972aa76a8a1b0137cc8895f5a9101ef1c07ef4e4e4d11e96fa5d4438"
+      },
+      "timestamp": "2025-11-30T09:57:58.719Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimCodes",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1; TS8606329d027=0864106fd4ab20003b2825acbb921231f707a933b2deb0498b0b96fdfaaf98852f4525bc04e46db908847e1f5811300005d66c5853d95482a6ed1f062be115b25728c637972aa76a8a1b0137cc8895f5a9101ef1c07ef4e4e4d11e96fa5d4438",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747}",
+      "timestamp": "2025-11-30T09:57:58.720Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getutmessagedisplayable",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1; TS8606329d027=0864106fd4ab20003b2825acbb921231f707a933b2deb0498b0b96fdfaaf98852f4525bc04e46db908847e1f5811300005d66c5853d95482a6ed1f062be115b25728c637972aa76a8a1b0137cc8895f5a9101ef1c07ef4e4e4d11e96fa5d4438"
+      },
+      "timestamp": "2025-11-30T09:57:58.720Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getutmessageinternalversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1; TS8606329d027=0864106fd4ab20003b2825acbb921231f707a933b2deb0498b0b96fdfaaf98852f4525bc04e46db908847e1f5811300005d66c5853d95482a6ed1f062be115b25728c637972aa76a8a1b0137cc8895f5a9101ef1c07ef4e4e4d11e96fa5d4438"
+      },
+      "timestamp": "2025-11-30T09:57:58.720Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getappversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1; TS8606329d027=0864106fd4ab20003b2825acbb921231f707a933b2deb0498b0b96fdfaaf98852f4525bc04e46db908847e1f5811300005d66c5853d95482a6ed1f062be115b25728c637972aa76a8a1b0137cc8895f5a9101ef1c07ef4e4e4d11e96fa5d4438"
+      },
+      "timestamp": "2025-11-30T09:57:58.721Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getdeployidversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=2566; s_ppv=Salary%2520calculation%2C23%2C23%2C23%2C600%2C4%2C1; TS8606329d027=0864106fd4ab20003b2825acbb921231f707a933b2deb0498b0b96fdfaaf98852f4525bc04e46db908847e1f5811300005d66c5853d95482a6ed1f062be115b25728c637972aa76a8a1b0137cc8895f5a9101ef1c07ef4e4e4d11e96fa5d4438"
+      },
+      "timestamp": "2025-11-30T09:57:58.721Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/validate",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; TS8606329d027=0864106fd4ab20003b2825acbb921231f707a933b2deb0498b0b96fdfaaf98852f4525bc04e46db908847e1f5811300005d66c5853d95482a6ed1f062be115b25728c637972aa76a8a1b0137cc8895f5a9101ef1c07ef4e4e4d11e96fa5d4438; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:57:59.585Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimCodes",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab20005b62a412c2f3840493395b73d357a2e4935ab8edc369451b533ae022afc6338f08cadc0e71113000de371c9c59648d888c36a44747714be102eb71629dd9765a8d35d36b4c5c86ab1d0ed07008631d21f21d9501bc510537",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:01.318Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/isFedProvTaxExemptDisplay",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab20005b62a412c2f3840493395b73d357a2e4935ab8edc369451b533ae022afc6338f08cadc0e71113000de371c9c59648d888c36a44747714be102eb71629dd9765a8d35d36b4c5c86ab1d0ed07008631d21f21d9501bc510537",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:01.319Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculate",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/step3",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab20005b62a412c2f3840493395b73d357a2e4935ab8edc369451b533ae022afc6338f08cadc0e71113000de371c9c59648d888c36a44747714be102eb71629dd9765a8d35d36b4c5c86ab1d0ed07008631d21f21d9501bc510537",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:01.320Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimCodes",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/results",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab2000ece54efda3b25af44f8afb84e12bf0c074501cef279dce45e82b49fb51cddb9f0825cbadc21130000bc24c68d5e0f43e10cfc6ce1241267fa751d77577ed8f92c35a8fb3aa39f1e606b13259316d2df9128d90496bd899dd",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:02.919Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateClaimCodes",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/results",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab2000ece54efda3b25af44f8afb84e12bf0c074501cef279dce45e82b49fb51cddb9f0825cbadc21130000bc24c68d5e0f43e10cfc6ce1241267fa751d77577ed8f92c35a8fb3aa39f1e606b13259316d2df9128d90496bd899dd",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:02.920Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/SALARY/calculateResultClaimCode",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/results",
+        "x-xsrf-token": "Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab2000ece54efda3b25af44f8afb84e12bf0c074501cef279dce45e82b49fb51cddb9f0825cbadc21130000bc24c68d5e0f43e10cfc6ce1241267fa751d77577ed8f92c35a8fb3aa39f1e606b13259316d2df9128d90496bd899dd",
+        "origin": "https://apps.cra-arc.gc.ca"
+      },
+      "postData": "{\"cppEqualizationFlag\":false,\"clergyFlag\":\"FALSE\",\"calculationType\":\"SALARY\",\"employeeName\":null,\"employerName\":null,\"jurisdiction\":\"ONTARIO\",\"payPeriodFrequency\":\"MONTHLY_12PP\",\"datePaid\":\"2025-01-30T18:30:00.000Z\",\"incomeAmount\":5000,\"vacationPay\":null,\"salaryType\":\"NO_BONUS_PAY_NO_RETROACTIVE_PAY\",\"retroactivePay\":null,\"numberOfPayPeriodsOfRetroactivePay\":null,\"deductionsFromRetroactivePay\":null,\"totalCurrentBonusPayable\":null,\"previousBonus\":null,\"bonusF5YearToDate\":null,\"retroF5YearToDate\":null,\"deductionsFromBonus\":null,\"taxableBenefitsFlag\":false,\"quebecTaxableBenefitsFlag\":false,\"quebecTaxableBenefits\":null,\"unionDuesFlag\":false,\"clergyType\":\"NO_HOUSING\",\"clergyResidenceDeductionFlag\":null,\"clergyResidenceDeduction\":null,\"clergyHousingAllowance\":null,\"clergyHousingAllowanceUtilities\":null,\"clergyHousingBenefit\":null,\"clergyHousingBenefitUtilities\":null,\"contributionEmployerRrspFlag\":false,\"contributionRrspOrRppOrPrppFlag\":false,\"taxIndigenousFlag\":false,\"indigenousExemptAmount\":null,\"indigenousExemptBonusRetroAmount\":null,\"pensionableForIndigenousExemptAmountFlag\":null,\"pensionableForIndigenousExemptBonusRetroAmountFlag\":null,\"indigenousExemptAnnualRemunerationAmount\":null,\"indigenousExemptCommissionIncomeAmount\":null,\"pensionableForIndigenousExemptCommissionIncomeAmountFlag\":null,\"pensionableForIndigenousExemptAnnualRemunerationAmountFlag\":null,\"federalTd1DisplayableFlag\":false,\"provincialTd1DisplayableFlag\":false,\"td1ClaimAmountFed\":16129,\"td1ClaimAmountProv\":12747,\"federalClaimCode\":\"CLAIM_CODE_1\",\"requestedAdditionalTaxDeductions\":null,\"td1ClaimCodeType\":\"CLAIM_AMOUNT_TD1\",\"provinceTerritoryClaimCode\":\"CLAIM_CODE_1\",\"cppQppType\":\"CPP_QPP_YEAR_TO_DATE\",\"numberPensionableMonths\":12,\"pensionableEarningsYearToDate\":null,\"cppOrQppContributionsDeductedYearToDate\":null,\"secondAdditionalCppOrQppContributionsDeductedYearToDate\":null,\"employmentInsuranceType\":\"EI_YEAR_TO_DATE\",\"insurableEarningsYearToDate\":null,\"employmentInsuranceDeductedYearToDate\":null,\"employerEmploymentInsurancePremiumRate\":1.4}",
+      "timestamp": "2025-11-30T09:58:02.921Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/assets/img/SPR_PDF_Icon.svg",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/results",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=3051; s_ppv=Salary%2520calculation%2C20%2C20%2C20%2C600%2C5%2C1; TS8606329d027=0864106fd4ab2000ece54efda3b25af44f8afb84e12bf0c074501cef279dce45e82b49fb51cddb9f0825cbadc21130000bc24c68d5e0f43e10cfc6ce1241267fa751d77577ed8f92c35a8fb3aa39f1e606b13259316d2df9128d90496bd899dd"
+      },
+      "timestamp": "2025-11-30T09:58:02.948Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getutmessagedisplayable",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/results",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1070; s_ppv=Salary%2520calculation%253A%2520Result%2C56%2C56%2C56%2C600%2C1%2C1; TS8606329d027=0864106fd4ab2000d613d8202b0a20d1c0a9b4df0a7231cfb161fc09095b27776d85be7ec846e6b30809aa9f20113000877bd7445085d090006b460f9d430d6bec75f1111d100b65f27291b91fde9bf3a064e35b085da4cd1b1a0de7d3c456a4"
+      },
+      "timestamp": "2025-11-30T09:58:04.493Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getutmessageinternalversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/results",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1070; s_ppv=Salary%2520calculation%253A%2520Result%2C56%2C56%2C56%2C600%2C1%2C1; TS8606329d027=0864106fd4ab2000d613d8202b0a20d1c0a9b4df0a7231cfb161fc09095b27776d85be7ec846e6b30809aa9f20113000877bd7445085d090006b460f9d430d6bec75f1111d100b65f27291b91fde9bf3a064e35b085da4cd1b1a0de7d3c456a4"
+      },
+      "timestamp": "2025-11-30T09:58:04.494Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getappversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/results",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1070; s_ppv=Salary%2520calculation%253A%2520Result%2C56%2C56%2C56%2C600%2C1%2C1; TS8606329d027=0864106fd4ab2000d613d8202b0a20d1c0a9b4df0a7231cfb161fc09095b27776d85be7ec846e6b30809aa9f20113000877bd7445085d090006b460f9d430d6bec75f1111d100b65f27291b91fde9bf3a064e35b085da4cd1b1a0de7d3c456a4"
+      },
+      "timestamp": "2025-11-30T09:58:04.494Z"
+    },
+    {
+      "url": "https://apps.cra-arc.gc.ca/ebci/rhpd/rest/api/ext/priv/calculator/getdeployidversion",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "accept": "application/json, text/plain, */*",
+        "referer": "https://apps.cra-arc.gc.ca/ebci/rhpd/beta/results",
+        "rccr-client-id": "8887c17b-ddf6-178b-e8f0-f2358a190b70",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "cookie": "Apache=22deec9.644cce34a32d1; JSESSIONID=PB3UMf6qslUE1096-ZfAMCcGLFPmrwJZMWXsIYy9j5X3If_DBz8n!1057479069!-391273887; cookiesession1=678B768F23BE43BA3AA4C58A4E501BEF; at_check=true; AMCVS_A90F2A0D55423F537F000101%40AdobeOrg=1; mbox=session#5d809bd421514f7fad52dcb653f886c4#1764498500|PC#5d809bd421514f7fad52dcb653f886c4.41_0#1827741440; s_plt=NaN; s_pltp=undefined; gpv_pt=Payroll%20Deductions%20Online%20Calculator; gpv_pthl=blank%20theme; gpv_pc=Canada%20Revenue%20Agency; gpv_pqs=undefined; gpv_url=apps.cra-arc.gc.ca/ebci/rhpd/beta/; s_ips=600; s_cc=true; AMCV_A90F2A0D55423F537F000101%40AdobeOrg=179643557%7CMCIDTS%7C20423%7CMCMID%7C48259288252437614623708423637571956300%7CMCAAMLH-1765101438%7C12%7CMCAAMB-1765101438%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1764503839s%7CNONE%7CMCAID%7CNONE%7CMCSYNCSOP%7C411-20430%7CvVersion%7C5.5.0; DomComplete=9380; XSRF-TOKEN=Qy9jZUpsSGtVcnVoMXhRQU4vTDczTUNva3FHSmhTQnhhckZsQUU5YmlDYz0uNDBkZjI1YWYtYzBlNy00YmQxLTk2NTMtMjZkZDY4OTM0MWQ0; TS01338dea=01450b6450ef5c66aa23fcab6b5a7412b5a87e05f30e5a10dec773dfec6f638fbf3f16c8a7532420ebec659366f3c00c6aff97fc17247b315d6d9f75accdcc18b619c9f37a48409695b5be7ce86dd0b44f88d73a274591124a01dd2a020bf26f55ca357f68ad3310e59c73422c465c97f45513b7e6; s_tp=1070; s_ppv=Salary%2520calculation%253A%2520Result%2C56%2C56%2C56%2C600%2C1%2C1; TS8606329d027=0864106fd4ab2000d613d8202b0a20d1c0a9b4df0a7231cfb161fc09095b27776d85be7ec846e6b30809aa9f20113000877bd7445085d090006b460f9d430d6bec75f1111d100b65f27291b91fde9bf3a064e35b085da4cd1b1a0de7d3c456a4"
+      },
+      "timestamp": "2025-11-30T09:58:04.495Z"
+    }
+  ],
+  "results": {
+    "Federal tax deduction": "485.09",
+    "Provincial tax deduction": "252.97",
+    "Pensionable earnings": "0.00",
+    "CPP contributions": "0.00",
+    "CPP2 contributions": "0.00",
+    "Insurable earnings": "0.00",
+    "EI premiums": "0.00"
+  }
+}
