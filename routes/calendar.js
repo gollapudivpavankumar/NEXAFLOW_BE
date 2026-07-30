@@ -30,8 +30,8 @@ router.get('/:organizationId/events', protect, checkOrganizationAccess, async (r
     }
 
     const events = await CalendarEvent.find(query)
-      .populate('createdBy', 'email')
-      .populate('participants.userId', 'email')
+      .populate('createdBy', 'email name avatarColor title role')
+      .populate('participants.userId', 'email name avatarColor title role')
       .sort({ startDate: 1 });
 
     res.json({ events });
@@ -68,8 +68,8 @@ router.get('/:organizationId/my-events', protect, checkOrganizationAccess, emplo
     }
 
     const events = await CalendarEvent.find(query)
-      .populate('createdBy', 'email')
-      .populate('participants.userId', 'email')
+      .populate('createdBy', 'email name avatarColor title role')
+      .populate('participants.userId', 'email name avatarColor title role')
       .sort({ startDate: 1 });
 
     res.json({ events });
@@ -168,8 +168,8 @@ router.get('/:organizationId/events/:id', protect, checkOrganizationAccess, asyn
       _id: req.params.id,
       organizationId: req.params.organizationId
     })
-      .populate('createdBy', 'email')
-      .populate('participants.userId', 'email');
+      .populate('createdBy', 'email name avatarColor title role')
+      .populate('participants.userId', 'email name avatarColor title role');
 
     if (!event) {
       return res.status(404).json({ message: 'Event not found' });
@@ -222,8 +222,8 @@ router.post('/:organizationId/events', protect, checkOrganizationAccess, employe
     }
 
     const populated = await CalendarEvent.findById(event._id)
-      .populate('createdBy', 'email')
-      .populate('participants.userId', 'email');
+      .populate('createdBy', 'email name avatarColor title role')
+      .populate('participants.userId', 'email name avatarColor title role');
 
     res.status(201).json({ event: populated });
   } catch (error) {
@@ -257,8 +257,8 @@ router.put('/:organizationId/events/:id', protect, checkOrganizationAccess, asyn
       updateData,
       { new: true }
     )
-      .populate('createdBy', 'email')
-      .populate('participants.userId', 'email');
+      .populate('createdBy', 'email name avatarColor title role')
+      .populate('participants.userId', 'email name avatarColor title role');
 
     res.json({ event: updatedEvent });
   } catch (error) {
@@ -325,8 +325,8 @@ router.put('/:organizationId/events/:id/rsvp', protect, checkOrganizationAccess,
     await event.save();
 
     const populated = await CalendarEvent.findById(event._id)
-      .populate('createdBy', 'email')
-      .populate('participants.userId', 'email');
+      .populate('createdBy', 'email name avatarColor title role')
+      .populate('participants.userId', 'email name avatarColor title role');
 
     res.json({ event: populated });
   } catch (error) {
@@ -375,8 +375,8 @@ router.post('/:organizationId/events/:id/meeting-link', protect, checkOrganizati
     await event.save();
 
     const populated = await CalendarEvent.findById(event._id)
-      .populate('createdBy', 'email')
-      .populate('participants.userId', 'email');
+      .populate('createdBy', 'email name avatarColor title role')
+      .populate('participants.userId', 'email name avatarColor title role');
 
     res.json({
       event: populated,

@@ -1,6 +1,8 @@
 import express from 'express';
 import Employee from '../models/Employee.js';
 import User from '../models/User.js';
+import Organization from '../models/Organization.js';
+import { colorFromString } from '../utils/avatarColor.js';
 import LeaveType from '../models/LeaveType.js';
 import LeaveBalance from '../models/LeaveBalance.js';
 import PaymentTracking from '../models/PaymentTracking.js';
@@ -126,6 +128,9 @@ router.post('/:organizationId/with-login', protect, checkOrganizationAccess, org
       // Login options
       password,
       createLogin,
+      // Grants the Jira Dashboard alongside the ERP login. Ignored unless a
+      // login is being created, and rejected if the org never bought it.
+      taskhubAccess = false,
       generateHistoricalPayments = false
     } = req.body;
 
@@ -165,6 +170,19 @@ router.post('/:organizationId/with-login', protect, checkOrganizationAccess, org
       const existingUser = await User.findOne({ email });
       if (existingUser) {
         return res.status(400).json({ message: 'Email already exists. Please use a different email.' });
+      }
+
+      // An admin cannot grant a product the organization does not hold. Fail
+      // loudly rather than silently dropping the checkbox they just ticked.
+      if (taskhubAccess) {
+        const org = await Organization.findById(organizationId).select('packages');
+        const packages = org?.packages?.length ? org.packages : ['hrm'];
+        if (!packages.includes('taskhub')) {
+          return res.status(403).json({
+            message: 'Your organization does not have the Jira Dashboard package. Contact support to add it.',
+            missingPackage: 'taskhub'
+          });
+        }
       }
     }
 
@@ -268,9 +286,15 @@ router.post('/:organizationId/with-login', protect, checkOrganizationAccess, org
         createdUser = await User.create({
           email,
           password,
+          // Mirrored onto the User so chat, meetings and the Jira Dashboard can
+          // show a name without reaching into payroll data.
+          name,
+          title: jobTitle || position || '',
+          avatarColor: colorFromString(email),
           role: 'employee',
           organizationId,
-          employeeId: employee._id
+          employeeId: employee._id,
+          moduleAccess: { taskhub: Boolean(taskhubAccess) }
         });
       } catch (userCreateError) {
         // Clean up the already-created employee since login creation failed
@@ -401,12 +425,74 @@ router.post('/:organizationId/with-login', protect, checkOrganizationAccess, org
         : 'Employee created successfully',
       employee,
       loginCreated: createLogin,
+      taskhubAccess: Boolean(createLogin && taskhubAccess),
       userEmail: createdUser ? createdUser.email : null,
       historicalPaymentsGenerated: generatedPaymentsCount,
       historicalPaymentsFailed: failedPaymentsCount > 0 ? failedPaymentsCount : undefined
     });
   } catch (error) {
     console.error('Create employee with login error:', error);
+    res.status(500).json({ message: 'Server error', error: error.message });
+  }
+});
+
+// @route   PUT /api/employees/:organizationId/:employeeId/module-access
+// @desc    Turn optional product access on or off for an existing employee
+// @access  Private - OrgAdmin, SuperAdmin
+//
+// Registered here rather than in employees.js because it edits the User record
+// (identity and entitlement) rather than the Employee record (payroll data).
+router.put('/:organizationId/:employeeId/module-access', protect, checkOrganizationAccess, orgAdminOrSuperAdmin, async (req, res) => {
+  try {
+    const { organizationId, employeeId } = req.params;
+    const { taskhub } = req.body;
+
+    if (typeof taskhub !== 'boolean') {
+      return res.status(400).json({ message: 'taskhub must be true or false' });
+    }
+
+    const employee = await Employee.findOne({ _id: employeeId, organizationId });
+    if (!employee) {
+      return res.status(404).json({ message: 'Employee not found' });
+    }
+
+    if (!employee.userId) {
+      return res.status(400).json({
+        message: 'This employee has no login. Create login access before granting the Jira Dashboard.'
+      });
+    }
+
+    if (taskhub) {
+      const org = await Organization.findById(organizationId).select('packages');
+      const packages = org?.packages?.length ? org.packages : ['hrm'];
+      if (!packages.includes('taskhub')) {
+        return res.status(403).json({
+          message: 'Your organization does not have the Jira Dashboard package. Contact support to add it.',
+          missingPackage: 'taskhub'
+        });
+      }
+    }
+
+    const user = await User.findById(employee.userId);
+    if (!user) {
+      return res.status(404).json({ message: 'Linked login account not found' });
+    }
+
+    user.moduleAccess = { ...(user.moduleAccess || {}), taskhub };
+    // Backfill display fields for accounts created before they existed, so the
+    // person shows up properly the moment they open the dashboard.
+    if (!user.name) user.name = employee.name;
+    if (!user.avatarColor) user.avatarColor = colorFromString(user.email);
+    await user.save();
+
+    res.json({
+      message: taskhub ? 'Jira Dashboard access granted' : 'Jira Dashboard access removed',
+      employeeId: String(employee._id),
+      userId: String(user._id),
+      moduleAccess: { taskhub: Boolean(user.moduleAccess?.taskhub) }
+    });
+  } catch (error) {
+    console.error('Update module access error:', error);
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 });

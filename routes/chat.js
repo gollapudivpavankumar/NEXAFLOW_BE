@@ -7,8 +7,106 @@ import CallLog from '../models/CallLog.js';
 import UserPresence from '../models/UserPresence.js';
 import { protect, employeeOrOrgAdmin, checkOrganizationAccess, orgAdminOrSuperAdmin } from '../middleware/auth.js';
 import { createCall, endCall, generateUserToken, getApiKey, upsertUser } from '../services/dailyService.js';
+import { extractMentionIds, notifyTaskHub } from '../services/taskHubNotify.js';
+import { listTaskHubMembers } from '../utils/userDirectory.js';
 
 const router = express.Router();
+
+/** Human-readable titles for context-bound conversations. */
+const CONTEXT_KINDS = {
+  taskhub_task: 'Task discussion',
+  taskhub_project: 'Project discussion',
+  taskhub_global: 'Team chat'
+};
+
+// @route   POST /api/chat/:organizationId/conversations/context
+// @desc    Get (or create) the conversation bound to a Jira Dashboard record
+// @access  Employee, OrgAdmin
+//
+// This is what lets task threads, project threads and the dashboard's team chat
+// live in the same Conversation/Message store as the ERP's Messages module.
+// There is exactly one conversation per bound record, so nothing is duplicated
+// and nothing needs syncing.
+router.post('/:organizationId/conversations/context', protect, checkOrganizationAccess, employeeOrOrgAdmin, async (req, res) => {
+  try {
+    const { organizationId } = req.params;
+    const { kind, refId, title } = req.body;
+    const userId = req.user._id;
+
+    if (!CONTEXT_KINDS[kind]) {
+      return res.status(400).json({ message: 'Unknown conversation context' });
+    }
+
+    // The org-wide team chat has no per-record id; key it on the org itself so
+    // the unique index still has a concrete value to work with.
+    const contextRefId = kind === 'taskhub_global' ? organizationId : refId;
+    if (!contextRefId) {
+      return res.status(400).json({ message: 'refId is required for this context' });
+    }
+
+    let conversation = await Conversation.findOne({
+      organizationId,
+      'context.kind': kind,
+      'context.refId': contextRefId
+    });
+
+    if (!conversation) {
+      // The team chat is open to everyone with dashboard access; record threads
+      // start with just their opener and grow as people post.
+      const participants = kind === 'taskhub_global'
+        ? (await listTaskHubMembers(organizationId)).map((m) => m._id)
+        : [userId];
+
+      if (!participants.some((p) => String(p) === String(userId))) {
+        participants.push(userId);
+      }
+
+      try {
+        conversation = await Conversation.create({
+          organizationId,
+          participants,
+          type: 'channel',
+          name: title || CONTEXT_KINDS[kind],
+          isPrivate: kind !== 'taskhub_global',
+          createdBy: userId,
+          admins: [userId],
+          context: { kind, refId: contextRefId }
+        });
+      } catch (createError) {
+        // Two tabs can race to open the same thread; the unique partial index
+        // makes the loser fail, so fall back to reading the winner's row.
+        if (createError?.code === 11000) {
+          conversation = await Conversation.findOne({
+            organizationId,
+            'context.kind': kind,
+            'context.refId': contextRefId
+          });
+        } else {
+          throw createError;
+        }
+      }
+    }
+
+    if (!conversation) {
+      return res.status(500).json({ message: 'Could not open conversation' });
+    }
+
+    // Anyone allowed to see the record joins its thread on first visit, so
+    // replies reach them without an explicit invite step.
+    if (!conversation.participants.some((p) => String(p) === String(userId))) {
+      conversation.participants.push(userId);
+      await conversation.save();
+    }
+
+    const populated = await Conversation.findById(conversation._id)
+      .populate('participants', 'email role name avatarColor title');
+
+    res.json({ conversation: populated });
+  } catch (error) {
+    console.error('Get context conversation error:', error);
+    res.status(500).json({ message: error.message || 'Server error' });
+  }
+});
 
 // @route   GET /api/chat/:organizationId/conversations
 // @desc    Get all conversations for current user
@@ -25,7 +123,7 @@ router.get('/:organizationId/conversations', protect, checkOrganizationAccess, e
     };
 
     const conversations = await Conversation.find(query)
-      .populate('participants', 'email role name')
+      .populate('participants', 'email role name avatarColor title')
       .sort({ lastMessageAt: -1 });
 
     // Filter by search term if provided
@@ -76,7 +174,7 @@ router.post('/:organizationId/conversations', protect, checkOrganizationAccess, 
     const existing = await Conversation.findOne({
       organizationId,
       participants: { $all: [userId, participantId] }
-    }).populate('participants', 'email role name');
+    }).populate('participants', 'email role name avatarColor title');
 
     if (existing) {
       return res.json({ conversation: existing });
@@ -98,7 +196,7 @@ router.post('/:organizationId/conversations', protect, checkOrganizationAccess, 
       organizationId
     });
 
-    const populated = await Conversation.findById(conversation._id).populate('participants', 'email role name');
+    const populated = await Conversation.findById(conversation._id).populate('participants', 'email role name avatarColor title');
     res.status(201).json({ conversation: populated });
   } catch (error) {
     console.error('Create conversation error:', error);
@@ -132,7 +230,7 @@ router.get('/:organizationId/conversations/:conversationId/messages', protect, c
     }
 
     const messages = await Message.find(query)
-      .populate('senderId', 'email role name')
+      .populate('senderId', 'email role name avatarColor title')
       .sort({ createdAt: -1 })
       .limit(parseInt(limit));
 
@@ -224,25 +322,84 @@ router.post('/:organizationId/messages', protect, checkOrganizationAccess, emplo
     }
     await conversation.save();
 
-    const populated = await Message.findById(message._id).populate('senderId', 'email role name');
+    const populated = await Message.findById(message._id).populate('senderId', 'email role name avatarColor title');
 
-    // Create notification for the recipient
-    const recipientId = conversation.participants.find(p => p.toString() !== userId.toString());
-    if (recipientId) {
-      try {
-        await Notification.create({
-          userId: recipientId,
-          organizationId,
-          type: 'message',
-          title: 'New Message',
-          message: `You have a new message from ${req.user.email || req.user.name}`,
-          link: `/messages`,
-          relatedId: conversation._id
-        });
-      } catch (notifError) {
-        console.error('Failed to create notification:', notifError);
-        // Don't fail the message send if notification fails
+    // Notify the right people, without spamming a busy channel.
+    //
+    // Direct message  -> the other participant, as before.
+    // Group / channel -> only people actually mentioned.
+    // Task thread     -> the task's assignees too, so work you own reaches you.
+    try {
+      const senderName = req.user.name || req.user.email;
+      const mentionIds = extractMentionIds(content || '');
+
+      if (conversation.type === 'direct') {
+        const recipientId = conversation.participants.find(p => p.toString() !== userId.toString());
+        if (recipientId) {
+          await Notification.create({
+            userId: recipientId,
+            organizationId,
+            actorId: userId,
+            type: 'message',
+            title: 'New Message',
+            message: `You have a new message from ${senderName}`,
+            link: `/messages`,
+            relatedId: conversation._id
+          });
+        }
       }
+
+      const contextKind = conversation.context?.kind;
+      const contextRefId = conversation.context?.refId;
+      const hubLink = contextKind === 'taskhub_task'
+        ? `/tasks/${contextRefId}`
+        : contextKind === 'taskhub_project'
+          ? `/projects/${contextRefId}`
+          : '/chat';
+
+      if (mentionIds.length) {
+        await notifyTaskHub({
+          users: mentionIds,
+          organizationId,
+          actor: userId,
+          type: 'mention',
+          title: 'You were mentioned',
+          text: `${senderName} mentioned you in ${conversation.name || 'a conversation'}`,
+          taskId: contextKind === 'taskhub_task' ? String(contextRefId) : null,
+          projectId: contextKind === 'taskhub_project' ? String(contextRefId) : null,
+          messageId: String(message._id),
+          link: hubLink
+        });
+      }
+
+      if (contextKind === 'taskhub_task' && contextRefId) {
+        const { default: TaskHubTask } = await import('../models/TaskHubTask.js');
+        const task = await TaskHubTask.findOne({ _id: contextRefId, organizationId })
+          .select('assignees title')
+          .lean();
+        if (task) {
+          const alreadyNotified = new Set(mentionIds.map(String));
+          const targets = (task.assignees || [])
+            .map(String)
+            .filter((id) => !alreadyNotified.has(id));
+          if (targets.length) {
+            await notifyTaskHub({
+              users: targets,
+              organizationId,
+              actor: userId,
+              type: 'message',
+              title: 'New comment',
+              text: `${senderName} commented on ${task.title}`,
+              taskId: String(contextRefId),
+              messageId: String(message._id),
+              link: hubLink
+            });
+          }
+        }
+      }
+    } catch (notifError) {
+      console.error('Failed to create notification:', notifError);
+      // Don't fail the message send if notification fails
     }
 
     res.status(201).json({ message: populated });
@@ -294,7 +451,7 @@ router.get('/:organizationId/users', protect, checkOrganizationAccess, employeeO
     const users = await User.find({
       organizationId,
       _id: { $ne: userId }
-    }).select('email role name');
+    }).select('email role name avatarColor title');
 
     res.json({ users });
   } catch (error) {
@@ -382,9 +539,9 @@ router.post('/:organizationId/channels', protect, checkOrganizationAccess, emplo
     });
 
     const populated = await Conversation.findById(conversation._id)
-      .populate('participants', 'email role name')
-      .populate('createdBy', 'email role name')
-      .populate('admins', 'email role name');
+      .populate('participants', 'email role name avatarColor title')
+      .populate('createdBy', 'email role name avatarColor title')
+      .populate('admins', 'email role name avatarColor title');
 
     res.status(201).json({ conversation: populated });
   } catch (error) {
@@ -426,9 +583,9 @@ router.put('/:organizationId/channels/:channelId', protect, checkOrganizationAcc
     await conversation.save();
 
     const populated = await Conversation.findById(conversation._id)
-      .populate('participants', 'email role name')
-      .populate('createdBy', 'email role name')
-      .populate('admins', 'email role name');
+      .populate('participants', 'email role name avatarColor title')
+      .populate('createdBy', 'email role name avatarColor title')
+      .populate('admins', 'email role name avatarColor title');
 
     res.json({ conversation: populated });
   } catch (error) {
@@ -476,9 +633,9 @@ router.post('/:organizationId/channels/:channelId/members', protect, checkOrgani
     });
 
     const populated = await Conversation.findById(channelId)
-      .populate('participants', 'email role name')
-      .populate('createdBy', 'email role name')
-      .populate('admins', 'email role name');
+      .populate('participants', 'email role name avatarColor title')
+      .populate('createdBy', 'email role name avatarColor title')
+      .populate('admins', 'email role name avatarColor title');
 
     res.json({ conversation: populated });
   } catch (error) {
@@ -524,9 +681,9 @@ router.delete('/:organizationId/channels/:channelId/members/:userId', protect, c
     });
 
     const populated = await Conversation.findById(channelId)
-      .populate('participants', 'email role name')
-      .populate('createdBy', 'email role name')
-      .populate('admins', 'email role name');
+      .populate('participants', 'email role name avatarColor title')
+      .populate('createdBy', 'email role name avatarColor title')
+      .populate('admins', 'email role name avatarColor title');
 
     res.json({ conversation: populated });
   } catch (error) {
@@ -575,7 +732,7 @@ router.put('/:organizationId/messages/:id/edit', protect, checkOrganizationAcces
     message.editedAt = new Date();
     await message.save();
 
-    const populated = await Message.findById(message._id).populate('senderId', 'email role name');
+    const populated = await Message.findById(message._id).populate('senderId', 'email role name avatarColor title');
 
     res.json({ message: populated });
   } catch (error) {
@@ -664,8 +821,8 @@ router.post('/:organizationId/messages/:id/reactions', protect, checkOrganizatio
     await message.save();
 
     const populated = await Message.findById(message._id)
-      .populate('senderId', 'email role name')
-      .populate('reactions.userId', 'email role name');
+      .populate('senderId', 'email role name avatarColor title')
+      .populate('reactions.userId', 'email role name avatarColor title');
 
     res.json({ message: populated });
   } catch (error) {
@@ -725,7 +882,7 @@ router.post('/:organizationId/messages/:id/reply', protect, checkOrganizationAcc
     await conversation.save();
 
     const populated = await Message.findById(reply._id)
-      .populate('senderId', 'email role name')
+      .populate('senderId', 'email role name avatarColor title')
       .populate('replyTo');
 
     res.status(201).json({ message: populated });
@@ -775,7 +932,7 @@ router.post('/:organizationId/conversations/:conversationId/pin/:messageId', pro
     }
 
     const populated = await Conversation.findById(conversationId)
-      .populate('participants', 'email role name')
+      .populate('participants', 'email role name avatarColor title')
       .populate('pinnedMessages');
 
     res.json({ conversation: populated });
@@ -810,7 +967,7 @@ router.delete('/:organizationId/conversations/:conversationId/pin/:messageId', p
     });
 
     const populated = await Conversation.findById(conversationId)
-      .populate('participants', 'email role name')
+      .populate('participants', 'email role name avatarColor title')
       .populate('pinnedMessages');
 
     res.json({ conversation: populated });
@@ -888,8 +1045,8 @@ router.post('/:organizationId/calls/start', protect, checkOrganizationAccess, em
     });
 
     const populated = await CallLog.findById(callLog._id)
-      .populate('initiatedBy', 'email role name')
-      .populate('participants.userId', 'email role name');
+      .populate('initiatedBy', 'email role name avatarColor title')
+      .populate('participants.userId', 'email role name avatarColor title');
 
     res.status(201).json({
       call: populated,
@@ -945,8 +1102,8 @@ router.put('/:organizationId/calls/:callId/join', protect, checkOrganizationAcce
     const userToken = generateUserToken(userId.toString());
 
     const populated = await CallLog.findById(callLog._id)
-      .populate('initiatedBy', 'email role name')
-      .populate('participants.userId', 'email role name');
+      .populate('initiatedBy', 'email role name avatarColor title')
+      .populate('participants.userId', 'email role name avatarColor title');
 
     res.json({
       call: populated,
@@ -1007,8 +1164,8 @@ router.put('/:organizationId/calls/:callId/end', protect, checkOrganizationAcces
     }
 
     const populated = await CallLog.findById(callLog._id)
-      .populate('initiatedBy', 'email role name')
-      .populate('participants.userId', 'email role name');
+      .populate('initiatedBy', 'email role name avatarColor title')
+      .populate('participants.userId', 'email role name avatarColor title');
 
     res.json({ call: populated });
   } catch (error) {
@@ -1066,7 +1223,7 @@ router.get('/:organizationId/presence', protect, checkOrganizationAccess, employ
     // Find presence records for all org users
     const presenceRecords = await UserPresence.find({
       userId: { $in: orgUserIds }
-    }).populate('userId', 'email role name');
+    }).populate('userId', 'email role name avatarColor title');
 
     const presenceList = presenceRecords.map(p => ({
       userId: p.userId,

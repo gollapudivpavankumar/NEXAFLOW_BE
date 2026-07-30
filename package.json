@@ -9,7 +9,10 @@
     "seed": "node scripts/seed.js",
     "seed:employees": "node scripts/seedEmployees.js",
     "seed:manual-payslip": "node seedManualPayslipData.js",
-    "find:ids": "node findUserIds.js"
+    "find:ids": "node findUserIds.js",
+    "verify": "node scripts/verifyIntegration.js",
+    "smoke": "node scripts/smokeTest.js",
+    "migrate:taskhub": "node scripts/migrateTaskHub.js"
   },
   "author": "",
   "license": "ISC",

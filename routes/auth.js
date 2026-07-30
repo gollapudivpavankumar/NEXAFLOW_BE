@@ -4,6 +4,7 @@ import Organization from '../models/Organization.js';
 import Employee from '../models/Employee.js';
 import generateToken from '../utils/generateToken.js';
 import { protect } from '../middleware/auth.js';
+import { serializeAuthUser } from '../utils/authPayload.js';
 
 const router = express.Router();
 
@@ -82,34 +83,16 @@ router.post('/login', async (req, res) => {
       employee = await Employee.findById(user.employeeId);
     }
 
+    if (user.isActive === false) {
+      return res.status(403).json({ message: 'This account has been deactivated. Please contact your administrator.' });
+    }
+
     // Generate token
     const token = generateToken(user._id);
 
     res.json({
       token,
-      user: {
-        id: user._id,
-        email: user.email,
-        role: user.role,
-        organizationId: user.organizationId,
-        employeeId: user.employeeId,
-        organization: organization ? {
-          id: organization._id,
-          name: organization.name,
-          email: organization.email,
-          phone: organization.phone,
-          logo: organization.logo,
-          themeColor: organization.themeColor,
-          subscriptionStatus: organization.subscriptionStatus,
-          subscriptionPlan: organization.subscriptionPlan,
-          subscriptionEndDate: organization.subscriptionEndDate
-        } : null,
-        employee: employee ? {
-          id: employee._id,
-          name: employee.name,
-          email: employee.email
-        } : null
-      }
+      user: serializeAuthUser(user, organization, employee)
     });
   } catch (error) {
     console.error('Login error:', error);
@@ -134,31 +117,7 @@ router.get('/me', protect, async (req, res) => {
       employee = await Employee.findById(user.employeeId);
     }
 
-    res.json({
-      user: {
-        id: user._id,
-        email: user.email,
-        role: user.role,
-        organizationId: user.organizationId,
-        employeeId: user.employeeId,
-        organization: organization ? {
-          id: organization._id,
-          name: organization.name,
-          email: organization.email,
-          phone: organization.phone,
-          logo: organization.logo,
-          themeColor: organization.themeColor,
-          subscriptionStatus: organization.subscriptionStatus,
-          subscriptionPlan: organization.subscriptionPlan,
-          subscriptionEndDate: organization.subscriptionEndDate
-        } : null,
-        employee: employee ? {
-          id: employee._id,
-          name: employee.name,
-          email: employee.email
-        } : null
-      }
-    });
+    res.json({ user: serializeAuthUser(user, organization, employee) });
   } catch (error) {
     console.error('Get user error:', error);
     res.status(500).json({ message: 'Server error' });

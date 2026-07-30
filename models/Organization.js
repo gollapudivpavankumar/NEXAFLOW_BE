@@ -193,6 +193,14 @@ const organizationSchema = new mongoose.Schema({
     type: Boolean,
     default: true
   },
+  // Which products this organization has bought. `hrm` is the payroll/ERP
+  // suite; `taskhub` is the Jira Dashboard. An org admin can only grant a user
+  // access to a package the organization actually holds.
+  packages: {
+    type: [String],
+    enum: ['hrm', 'taskhub'],
+    default: ['hrm']
+  },
   // Subscription fields
   subscriptionStatus: {
     type: String,

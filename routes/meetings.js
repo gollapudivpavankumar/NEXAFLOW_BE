@@ -61,8 +61,8 @@ router.post('/:organizationId', protect, checkOrganizationAccess, employeeOrOrgA
     });
 
     const populated = await Meeting.findById(meeting._id)
-      .populate('createdBy', 'email role name')
-      .populate('participants.userId', 'email role name');
+      .populate('createdBy', 'email role name avatarColor title')
+      .populate('participants.userId', 'email role name avatarColor title');
 
     res.status(201).json({ meeting: populated });
   } catch (error) {
@@ -89,8 +89,8 @@ router.get('/:organizationId/upcoming', protect, checkOrganizationAccess, employ
         { 'participants.userId': userId }
       ]
     })
-      .populate('createdBy', 'email role name')
-      .populate('participants.userId', 'email role name')
+      .populate('createdBy', 'email role name avatarColor title')
+      .populate('participants.userId', 'email role name avatarColor title')
       .sort({ scheduledAt: 1 })
       .limit(10);
 
@@ -129,8 +129,8 @@ router.get('/:organizationId', protect, checkOrganizationAccess, employeeOrOrgAd
     }
 
     const meetings = await Meeting.find(query)
-      .populate('createdBy', 'email role name')
-      .populate('participants.userId', 'email role name')
+      .populate('createdBy', 'email role name avatarColor title')
+      .populate('participants.userId', 'email role name avatarColor title')
       .sort({ scheduledAt: 1 });
 
     res.json({ meetings });
@@ -148,8 +148,8 @@ router.get('/:organizationId/:meetingId', protect, checkOrganizationAccess, empl
     const { organizationId, meetingId } = req.params;
 
     const meeting = await Meeting.findOne({ _id: meetingId, organizationId })
-      .populate('createdBy', 'email role name')
-      .populate('participants.userId', 'email role name');
+      .populate('createdBy', 'email role name avatarColor title')
+      .populate('participants.userId', 'email role name avatarColor title');
 
     if (!meeting) {
       return res.status(404).json({ message: 'Meeting not found' });
@@ -191,8 +191,8 @@ router.put('/:organizationId/:meetingId', protect, checkOrganizationAccess, empl
     await meeting.save();
 
     const populated = await Meeting.findById(meeting._id)
-      .populate('createdBy', 'email role name')
-      .populate('participants.userId', 'email role name');
+      .populate('createdBy', 'email role name avatarColor title')
+      .populate('participants.userId', 'email role name avatarColor title');
 
     res.json({ meeting: populated });
   } catch (error) {
@@ -234,8 +234,8 @@ router.put('/:organizationId/:meetingId/respond', protect, checkOrganizationAcce
     await meeting.save();
 
     const populated = await Meeting.findById(meeting._id)
-      .populate('createdBy', 'email role name')
-      .populate('participants.userId', 'email role name');
+      .populate('createdBy', 'email role name avatarColor title')
+      .populate('participants.userId', 'email role name avatarColor title');
 
     res.json({ meeting: populated });
   } catch (error) {
@@ -315,8 +315,8 @@ router.put('/:organizationId/:meetingId/end', protect, checkOrganizationAccess, 
     await meeting.save();
 
     const populated = await Meeting.findById(meeting._id)
-      .populate('createdBy', 'email role name')
-      .populate('participants.userId', 'email role name');
+      .populate('createdBy', 'email role name avatarColor title')
+      .populate('participants.userId', 'email role name avatarColor title');
 
     res.json({ meeting: populated });
   } catch (error) {

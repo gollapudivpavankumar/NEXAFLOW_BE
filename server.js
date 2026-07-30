@@ -43,6 +43,10 @@ import calendarRoutes from './routes/calendar.js';
 import learningPathRoutes from './routes/learningPaths.js';
 import meetingRoutes from './routes/meetings.js';
 import webmailRoutes from './routes/webmail.js';
+import taskHubRoutes from './routes/taskhub.js';
+import notificationRoutes from './routes/notifications.js';
+
+import { CORS_ORIGINS, USING_DEFAULT_JWT_SECRET } from './config/env.js';
 
 // Socket.IO and HTTP
 import { createServer } from 'http';
@@ -69,10 +73,17 @@ const server = createServer(app);
 const io = initializeSocketService(server);
 
 // Middleware
-app.use(cors({
-  origin: '*',
-  credentials: true
-}));
+//
+// Defaults to allowing every origin, which is how this API has always run.
+// Set CORS_ORIGINS to a comma-separated allowlist to lock it down — note that
+// `credentials: true` is meaningless alongside a wildcard origin, so the
+// wildcard branch omits it rather than sending an invalid combination.
+const allowAllOrigins = CORS_ORIGINS.includes('*');
+app.use(cors(
+  allowAllOrigins
+    ? { origin: '*' }
+    : { origin: CORS_ORIGINS, credentials: true }
+));
 app.use(express.json({ limit: '50mb' })); // Increase limit for base64 images
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
@@ -119,6 +130,8 @@ app.use('/api/calendar', calendarRoutes);
 app.use('/api/learning-paths', learningPathRoutes);
 app.use('/api/meetings', meetingRoutes);
 app.use('/api/webmail', webmailRoutes);
+app.use('/api/taskhub', taskHubRoutes);
+app.use('/api/notifications', notificationRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {
@@ -174,6 +187,12 @@ const PORT = 5000;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log('Socket.IO enabled for real-time chat');
+  if (USING_DEFAULT_JWT_SECRET) {
+    console.warn(
+      '⚠  JWT_SECRET is not set — using the built-in development secret. ' +
+      'Set JWT_SECRET in the environment before running in production.'
+    );
+  }
 });
 
 export { io };

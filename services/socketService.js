@@ -11,6 +11,7 @@ import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 import UserPresence from '../models/UserPresence.js';
 import Conversation from '../models/Conversation.js';
+import { JWT_SECRET } from '../config/env.js';
 
 let io;
 
@@ -36,10 +37,7 @@ export function initializeSocketService(httpServer) {
         return next(new Error('Authentication error'));
       }
 
-      const decoded = jwt.verify(
-        token,
-        'your-super-secret-jwt-key-change-this-in-production'
-      );
+      const decoded = jwt.verify(token, JWT_SECRET);
 
       const user = await User.findById(decoded.id).select('-password');
       if (!user) {
@@ -345,4 +343,35 @@ export function initializeSocketService(httpServer) {
  */
 export function getIO() {
   return io;
+}
+
+/**
+ * Emit an event to every socket belonging to a set of users.
+ *
+ * Used by the Jira Dashboard routes so a task moving on one person's board
+ * appears live on everyone else's without a poll. Silently no-ops when the
+ * socket server has not started, so routes can call it unconditionally.
+ *
+ * @param {Array<string|import('mongoose').Types.ObjectId>} userIds
+ * @param {string} event
+ * @param {unknown} payload
+ */
+export function emitToUsers(userIds, event, payload) {
+  if (!io || !Array.isArray(userIds)) return;
+  const unique = [...new Set(userIds.filter(Boolean).map((id) => id.toString()))];
+  for (const id of unique) {
+    io.to(`user:${id}`).emit(event, payload);
+  }
+}
+
+/**
+ * Emit an event to everyone currently connected for an organization.
+ *
+ * @param {string|import('mongoose').Types.ObjectId} organizationId
+ * @param {string} event
+ * @param {unknown} payload
+ */
+export function emitToOrg(organizationId, event, payload) {
+  if (!io || !organizationId) return;
+  io.to(`org:${organizationId.toString()}`).emit(event, payload);
 }
