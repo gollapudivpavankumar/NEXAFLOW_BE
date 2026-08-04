@@ -265,7 +265,33 @@ check('the shell brands from the org record', /org\?\.logo/.test(hubLayout), 'ne
 check(
   'the shell keeps mobile navigation reachable',
   /taskhub-mobile-toggle/.test(hubLayout),
-  'the sidebar hides below lg, so a burger must appear at the same breakpoint'
+  'both navs hide below lg, so a burger must appear at the same breakpoint'
+);
+
+// Two navigation orientations, because the right one depends on the screen and
+// the work — a sidebar suits deep project trees, a top bar gives boards width.
+check('the shell offers both nav orientations', /navMode/.test(hubLayout) && /'horizontal'/.test(hubLayout));
+check('the orientation switch appears in both modes', (hubLayout.match(/navModeSwitch/g) || []).length >= 3);
+check(
+  'the chosen orientation is remembered',
+  /localStorage\.setItem\(NAV_MODE_KEY/.test(hubLayout) && /localStorage\.getItem\(NAV_MODE_KEY/.test(hubLayout)
+);
+check(
+  'reading the stored orientation cannot break private browsing',
+  /catch \{ \/\* private mode \*\/ \}/.test(hubLayout),
+  'localStorage.setItem throws when storage is disabled'
+);
+check('the horizontal nav is styled', /\.taskhub-topnav\b/.test(read(join(HUB, 'taskhub.css'))));
+
+// The login is the product's front door and gets its own proportions.
+check(
+  'the login uses a 70/30 split',
+  /grid-template-columns:\s*70fr 30fr/.test(read(join(HUB, 'taskhub.css')))
+);
+check(
+  'the story panel is dropped rather than squeezed on small screens',
+  /\.taskhub-login-story \{ display: none; \}/.test(read(join(HUB, 'taskhub.css'))),
+  'a narrow gradient sliver reads as decoration, not brand'
 );
 
 const hubCss = read(join(HUB, 'taskhub.css'));

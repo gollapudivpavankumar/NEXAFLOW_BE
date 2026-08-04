@@ -170,10 +170,23 @@ router.post('/:organizationId/conversations', protect, checkOrganizationAccess, 
       return res.status(400).json({ message: 'Cannot create conversation with yourself' });
     }
 
-    // Check if conversation already exists
+    // Look for an existing one-to-one conversation between exactly these two.
+    //
+    // `$all` on its own matches ANY conversation containing both people —
+    // including group channels and the Jira Dashboard's context-bound threads,
+    // which carry several members. Without the extra constraints, asking to
+    // message someone you share a channel with returns that channel instead of
+    // a DM, and the conversation appears never to open.
+    //
+    // `$size: 2` pins it to a pair; the type and context guards keep group and
+    // record-bound threads out. `$nin` also matches documents where `type` was
+    // never set, which is how the oldest DMs are stored — narrowing to
+    // `type: 'direct'` would miss those and create duplicates.
     const existing = await Conversation.findOne({
       organizationId,
-      participants: { $all: [userId, participantId] }
+      participants: { $all: [userId, participantId], $size: 2 },
+      type: { $nin: ['channel', 'group'] },
+      'context.kind': { $exists: false }
     }).populate('participants', 'email role name avatarColor title');
 
     if (existing) {
@@ -190,10 +203,12 @@ router.post('/:organizationId/conversations', protect, checkOrganizationAccess, 
       return res.status(403).json({ message: 'Cannot start conversation with user from different organization' });
     }
 
-    // Create new conversation
+    // Create new conversation. `type` is set explicitly rather than left to the
+    // schema default so the stored document is unambiguous to queries.
     const conversation = await Conversation.create({
       participants: [userId, participantId],
-      organizationId
+      organizationId,
+      type: 'direct'
     });
 
     const populated = await Conversation.findById(conversation._id).populate('participants', 'email role name avatarColor title');

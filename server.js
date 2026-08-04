@@ -182,10 +182,27 @@ try {
 }
 
 // Start server
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
+
+// A failed listen must be fatal. The uncaughtException handler above keeps the
+// process alive on purpose (a stray mail-socket error should not kill the API),
+// but that also meant an EADDRINUSE left a process running that served nothing
+// — the port stayed owned by whatever was already there, and the failure was
+// invisible until a request came back from the wrong application.
+server.on('error', (error) => {
+  if (error.code === 'EADDRINUSE') {
+    console.error(
+      `\n✗ Port ${PORT} is already in use by another process.\n` +
+      '  Free it, or start this server on a different port:  PORT=5001 npm run dev\n'
+    );
+  } else {
+    console.error('\n✗ Server failed to start:', error.message, '\n');
+  }
+  process.exit(1);
+});
 
 server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
   console.log('Socket.IO enabled for real-time chat');
   if (USING_DEFAULT_JWT_SECRET) {
     console.warn(
