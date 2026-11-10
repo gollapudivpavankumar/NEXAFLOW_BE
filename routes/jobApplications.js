@@ -80,8 +80,15 @@ router.post('/public/:organizationId/:jobId', async (req, res) => {
     }
 
     // Create application
+    // Public endpoint: drop fields only a reviewer may set
+    const {
+      _id, status: _status, rating: _rating, notes: _notes,
+      reviewedBy: _reviewedBy, reviewedDate: _reviewedDate,
+      ...applicantFields
+    } = req.body;
+
     const applicationData = {
-      ...req.body,
+      ...applicantFields,
       jobId,
       organizationId,
       ipAddress: req.ip || req.connection.remoteAddress

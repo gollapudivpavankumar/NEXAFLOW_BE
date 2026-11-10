@@ -218,7 +218,12 @@ router.put('/settings/:id', protect, async (req, res) => {
     } = req.body;
 
     // Check if user has access to this organization
-    if (req.user.role === 'orgadmin' && req.user.organizationId.toString() !== id) {
+    // Only a superadmin, or the org admin of this very organization, may edit
+    // settings. (Previously only the orgadmin case was checked, which let any
+    // employee — of any organization — rewrite another tenant's settings.)
+    const isOwnOrgAdmin = req.user.role === 'orgadmin' &&
+      req.user.organizationId?.toString() === id;
+    if (req.user.role !== 'superadmin' && !isOwnOrgAdmin) {
       return res.status(403).json({ message: 'Access denied to this organization' });
     }
 

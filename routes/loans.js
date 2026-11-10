@@ -146,6 +146,15 @@ router.get('/:organizationId/:id', protect, checkOrganizationAccess, async (req,
       return res.status(404).json({ message: 'Loan not found' });
     }
 
+    // Employees may only see their own loan
+    if (req.user.role === 'employee') {
+      const employee = await Employee.findOne({ userId: req.user._id }).select('_id');
+      const loanEmployeeId = loan.employeeId?._id || loan.employeeId;
+      if (!employee || String(loanEmployeeId) !== String(employee._id)) {
+        return res.status(403).json({ message: 'Access denied' });
+      }
+    }
+
     const repayments = await LoanRepayment.find({ loanId: req.params.id })
       .sort({ paymentDate: -1 });
 
@@ -291,6 +300,23 @@ router.post('/:organizationId/:id/repayment', protect, checkOrganizationAccess, 
 // @access  Protected
 router.get('/:organizationId/:id/repayments', protect, checkOrganizationAccess, async (req, res) => {
   try {
+    // The loan must belong to this organization (and, for employees, to them)
+    const loan = await Loan.findOne({
+      _id: req.params.id,
+      organizationId: req.params.organizationId
+    }).select('employeeId');
+
+    if (!loan) {
+      return res.status(404).json({ message: 'Loan not found' });
+    }
+
+    if (req.user.role === 'employee') {
+      const employee = await Employee.findOne({ userId: req.user._id }).select('_id');
+      if (!employee || String(loan.employeeId) !== String(employee._id)) {
+        return res.status(403).json({ message: 'Access denied' });
+      }
+    }
+
     const repayments = await LoanRepayment.find({ loanId: req.params.id })
       .sort({ paymentDate: -1 });
 

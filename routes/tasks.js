@@ -25,7 +25,8 @@ router.get('/:organizationId', protect, checkOrganizationAccess, employeeOrOrgAd
     }
 
     // If employee, only show tasks assigned to them
-    if (req.user.role === 'employee' && req.user.employeeId) {
+    if (req.user.role === 'employee') {
+      if (!req.user.employeeId) return res.json({ tasks: [] });
       query.assignedTo = req.user.employeeId;
     }
 
@@ -57,8 +58,8 @@ router.get('/:organizationId/:id', protect, checkOrganizationAccess, employeeOrO
     }
 
     // Check if employee is assigned to this task
-    if (req.user.role === 'employee' && req.user.employeeId) {
-      if (!task.assignedTo || task.assignedTo._id.toString() !== req.user.employeeId.toString()) {
+    if (req.user.role === 'employee') {
+      if (!task.assignedTo || task.assignedTo._id.toString() !== String(req.user.employeeId)) {
         return res.status(403).json({ message: 'Access denied to this task' });
       }
     }
@@ -119,8 +120,8 @@ router.put('/:organizationId/:id', protect, checkOrganizationAccess, employeeOrO
     }
 
     // If employee, they can only update their own tasks and only the status
-    if (req.user.role === 'employee' && req.user.employeeId) {
-      if (!task.assignedTo || task.assignedTo.toString() !== req.user.employeeId.toString()) {
+    if (req.user.role === 'employee') {
+      if (!task.assignedTo || task.assignedTo.toString() !== String(req.user.employeeId)) {
         return res.status(403).json({ message: 'Access denied to this task' });
       }
       // Employees can only update status

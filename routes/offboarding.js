@@ -109,6 +109,15 @@ router.get('/:organizationId/:id', protect, checkOrganizationAccess, async (req,
       return res.status(404).json({ message: 'Offboarding case not found' });
     }
 
+    // Employees may only see their own offboarding case
+    if (req.user.role === 'employee') {
+      const employee = await Employee.findOne({ userId: req.user._id }).select('_id');
+      const caseEmployeeId = offboarding.employeeId?._id || offboarding.employeeId;
+      if (!employee || String(caseEmployeeId) !== String(employee._id)) {
+        return res.status(403).json({ message: 'Access denied' });
+      }
+    }
+
     res.json({ offboarding });
   } catch (error) {
     res.status(500).json({ message: 'Server error', error: error.message });

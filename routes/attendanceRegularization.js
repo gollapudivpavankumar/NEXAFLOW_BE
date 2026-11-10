@@ -129,8 +129,16 @@ router.post('/:organizationId', protect, checkOrganizationAccess, async (req, re
     const employee = await Employee.findOne({ userId: req.user._id });
     if (!employee) return res.status(404).json({ message: 'Employee not found' });
 
+    // Whitelist the fields an employee may supply — spreading req.body let a
+    // caller create a request that was already 'Approved'.
+    const {
+      date, requestType, expectedCheckIn, expectedCheckOut,
+      actualCheckIn, actualCheckOut, reason, attachments
+    } = req.body;
+
     const request = await AttendanceRegularization.create({
-      ...req.body,
+      date, requestType, expectedCheckIn, expectedCheckOut,
+      actualCheckIn, actualCheckOut, reason, attachments,
       organizationId: req.params.organizationId,
       employeeId: employee._id,
       reportingManagerId: employee.reportingManagerId

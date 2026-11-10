@@ -172,9 +172,13 @@ router.put('/:organizationId/:id', protect, checkOrganizationAccess, orgAdminOrS
       req.body.publishedDate = new Date();
     }
 
+    // Never let the request body move the job to another tenant or forge
+    // server-managed fields.
+    const { _id, organizationId: _org, postedBy: _postedBy, applicationCount: _count, ...updateData } = req.body;
+
     const updatedJob = await Job.findByIdAndUpdate(
       id,
-      { $set: req.body },
+      { $set: updateData },
       { new: true, runValidators: true }
     ).populate('postedBy', 'email');
 

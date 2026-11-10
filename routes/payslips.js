@@ -849,8 +849,8 @@ router.get('/:organizationId/employee/:employeeId/preview', protect, checkOrgani
     const { months, templateId } = req.query;
 
     // Employees can only preview their own
-    if (req.user.role === 'employee' && req.user.employeeId) {
-      if (req.user.employeeId.toString() !== employeeId) {
+    if (req.user.role === 'employee') {
+      if (String(req.user.employeeId) !== employeeId) {
         return res.status(403).send('<h1>Access Denied</h1>');
       }
     }

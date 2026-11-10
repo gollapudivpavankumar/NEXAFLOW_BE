@@ -14,7 +14,8 @@ router.get('/:organizationId', protect, checkOrganizationAccess, employeeOrOrgAd
     let query = { organizationId };
 
     // If employee, only show projects they're assigned to
-    if (req.user.role === 'employee' && req.user.employeeId) {
+    if (req.user.role === 'employee') {
+      if (!req.user.employeeId) return res.json({ projects: [] });
       query.assignedEmployees = req.user.employeeId;
     }
 
@@ -46,8 +47,8 @@ router.get('/:organizationId/:id', protect, checkOrganizationAccess, employeeOrO
     }
 
     // Check if employee is assigned to this project
-    if (req.user.role === 'employee' && req.user.employeeId) {
-      const isAssigned = project.assignedEmployees.some(emp => emp._id.toString() === req.user.employeeId.toString());
+    if (req.user.role === 'employee') {
+      const isAssigned = project.assignedEmployees.some(emp => emp._id.toString() === String(req.user.employeeId));
       if (!isAssigned) {
         return res.status(403).json({ message: 'Access denied to this project' });
       }

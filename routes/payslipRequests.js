@@ -62,7 +62,8 @@ router.get('/:organizationId', protect, checkOrganizationAccess, employeeOrOrgAd
     let query = { organizationId };
 
     // Employees can only see their own requests
-    if (req.user.role === 'employee' && req.user.employeeId) {
+    if (req.user.role === 'employee') {
+      if (!req.user.employeeId) return res.json({ requests: [] });
       query.employeeId = req.user.employeeId;
     }
 
@@ -88,9 +89,9 @@ router.get('/:organizationId', protect, checkOrganizationAccess, employeeOrOrgAd
 // @access  OrgAdmin, SuperAdmin, Employee (own request)
 router.get('/:organizationId/:id', protect, checkOrganizationAccess, employeeOrOrgAdmin, async (req, res) => {
   try {
-    const { id } = req.params;
+    const { id, organizationId } = req.params;
 
-    const request = await PayslipRequest.findById(id)
+    const request = await PayslipRequest.findOne({ _id: id, organizationId })
       .populate('employeeId', 'name email')
       .populate('generatedBy', 'email');
 
@@ -99,8 +100,8 @@ router.get('/:organizationId/:id', protect, checkOrganizationAccess, employeeOrO
     }
 
     // Employees can only view their own requests
-    if (req.user.role === 'employee' && req.user.employeeId) {
-      if (request.employeeId._id.toString() !== req.user.employeeId.toString()) {
+    if (req.user.role === 'employee') {
+      if (request.employeeId._id.toString() !== String(req.user.employeeId)) {
         return res.status(403).json({ message: 'Access denied' });
       }
     }
@@ -167,8 +168,8 @@ router.delete('/:organizationId/:id', protect, checkOrganizationAccess, employee
     }
 
     // Employees can only delete their own pending requests
-    if (req.user.role === 'employee' && req.user.employeeId) {
-      if (request.employeeId.toString() !== req.user.employeeId.toString()) {
+    if (req.user.role === 'employee') {
+      if (request.employeeId.toString() !== String(req.user.employeeId)) {
         return res.status(403).json({ message: 'Access denied' });
       }
       if (request.status !== 'pending') {

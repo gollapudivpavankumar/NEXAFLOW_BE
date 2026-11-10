@@ -331,8 +331,8 @@ router.get('/:organizationId/employee/:employeeId', protect, checkOrganizationAc
     const { organizationId, employeeId } = req.params;
 
     // Employees can only view their own offer letters
-    if (req.user.role === 'employee' && req.user.employeeId) {
-      if (req.user.employeeId.toString() !== employeeId) {
+    if (req.user.role === 'employee') {
+      if (String(req.user.employeeId) !== employeeId) {
         return res.status(403).json({ message: 'Access denied' });
       }
     }

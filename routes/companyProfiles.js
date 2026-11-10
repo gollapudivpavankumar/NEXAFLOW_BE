@@ -3,7 +3,7 @@ import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
 import CompanyProfile from '../models/CompanyProfile.js';
-import { protect, orgAdminOrSuperAdmin } from '../middleware/auth.js';
+import { protect, orgAdminOrSuperAdmin, checkOrganizationAccess } from '../middleware/auth.js';
 
 const router = express.Router();
 
@@ -39,7 +39,7 @@ const upload = multer({
 // @route   GET /api/company-profiles/:organizationId
 // @desc    Get all company profiles for an organization
 // @access  OrgAdmin, SuperAdmin
-router.get('/:organizationId', protect, orgAdminOrSuperAdmin, async (req, res) => {
+router.get('/:organizationId', protect, checkOrganizationAccess, orgAdminOrSuperAdmin, async (req, res) => {
   try {
     const { organizationId } = req.params;
 
@@ -57,11 +57,11 @@ router.get('/:organizationId', protect, orgAdminOrSuperAdmin, async (req, res) =
 // @route   GET /api/company-profiles/:organizationId/:id
 // @desc    Get single company profile
 // @access  OrgAdmin, SuperAdmin
-router.get('/:organizationId/:id', protect, orgAdminOrSuperAdmin, async (req, res) => {
+router.get('/:organizationId/:id', protect, checkOrganizationAccess, orgAdminOrSuperAdmin, async (req, res) => {
   try {
-    const { id } = req.params;
+    const { id, organizationId } = req.params;
 
-    const profile = await CompanyProfile.findById(id)
+    const profile = await CompanyProfile.findOne({ _id: id, organizationId })
       .populate('createdBy', 'name email');
 
     if (!profile) {
@@ -78,7 +78,7 @@ router.get('/:organizationId/:id', protect, orgAdminOrSuperAdmin, async (req, re
 // @route   POST /api/company-profiles/:organizationId
 // @desc    Create new company profile
 // @access  OrgAdmin, SuperAdmin
-router.post('/:organizationId', protect, orgAdminOrSuperAdmin, upload.single('companyLogo'), async (req, res) => {
+router.post('/:organizationId', protect, checkOrganizationAccess, orgAdminOrSuperAdmin, upload.single('companyLogo'), async (req, res) => {
   try {
     const { organizationId } = req.params;
     const { profileName, companyName, companyEmail, companyAddress, companyPhone, bankAccountName, bankAccountNumber, bankTransitNumber, isDefault } = req.body;
@@ -125,7 +125,7 @@ router.post('/:organizationId', protect, orgAdminOrSuperAdmin, upload.single('co
 // @route   PUT /api/company-profiles/:organizationId/:id
 // @desc    Update company profile
 // @access  OrgAdmin, SuperAdmin
-router.put('/:organizationId/:id', protect, orgAdminOrSuperAdmin, upload.single('companyLogo'), async (req, res) => {
+router.put('/:organizationId/:id', protect, checkOrganizationAccess, orgAdminOrSuperAdmin, upload.single('companyLogo'), async (req, res) => {
   try {
     const { id, organizationId } = req.params;
     const { profileName, companyName, companyEmail, companyAddress, companyPhone, bankAccountName, bankAccountNumber, bankTransitNumber, isDefault } = req.body;
@@ -188,7 +188,7 @@ router.put('/:organizationId/:id', protect, orgAdminOrSuperAdmin, upload.single(
 // @route   DELETE /api/company-profiles/:organizationId/:id
 // @desc    Delete company profile
 // @access  OrgAdmin, SuperAdmin
-router.delete('/:organizationId/:id', protect, orgAdminOrSuperAdmin, async (req, res) => {
+router.delete('/:organizationId/:id', protect, checkOrganizationAccess, orgAdminOrSuperAdmin, async (req, res) => {
   try {
     const { id, organizationId } = req.params;
 

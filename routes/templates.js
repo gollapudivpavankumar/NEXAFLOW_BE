@@ -52,9 +52,13 @@ router.get('/:organizationId', protect, checkOrganizationAccess, orgAdminOrSuper
 // @access  OrgAdmin, SuperAdmin
 router.get('/:organizationId/:id', protect, checkOrganizationAccess, orgAdminOrSuperAdmin, async (req, res) => {
   try {
-    const { id } = req.params;
+    const { id, organizationId } = req.params;
 
-    const template = await PayslipTemplate.findById(id).populate('createdBy', 'email');
+    // Own-organization templates and shared global templates only
+    const template = await PayslipTemplate.findOne({
+      _id: id,
+      $or: [{ organizationId }, { isGlobal: true }]
+    }).populate('createdBy', 'email');
 
     if (!template) {
       return res.status(404).json({ message: 'Template not found' });

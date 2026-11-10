@@ -1,6 +1,7 @@
 import express from 'express';
 import ManualPayslipEmployee from '../models/ManualPayslipEmployee.js';
-import { protect, orgAdminOrSuperAdmin } from '../middleware/auth.js';
+import CompanyProfile from '../models/CompanyProfile.js';
+import { protect, orgAdminOrSuperAdmin, checkOrganizationAccess } from '../middleware/auth.js';
 
 const router = express.Router();
 
@@ -11,7 +12,14 @@ router.get('/profile/:companyProfileId', protect, orgAdminOrSuperAdmin, async (r
   try {
     const { companyProfileId } = req.params;
 
-    const employees = await ManualPayslipEmployee.find({ companyProfileId })
+    // This route carries no :organizationId, so scope it by the caller's own
+    // organization — otherwise any admin could list another tenant's employees.
+    const filter = { companyProfileId };
+    if (req.user.role !== 'superadmin') {
+      filter.organizationId = req.user.organizationId;
+    }
+
+    const employees = await ManualPayslipEmployee.find(filter)
       .populate('createdBy', 'name email')
       .sort({ isDefault: -1, employeeName: 1 });
 
@@ -25,10 +33,16 @@ router.get('/profile/:companyProfileId', protect, orgAdminOrSuperAdmin, async (r
 // @route   POST /api/manual-payslip-employees/:organizationId
 // @desc    Create new manual payslip employee
 // @access  OrgAdmin, SuperAdmin
-router.post('/:organizationId', protect, orgAdminOrSuperAdmin, async (req, res) => {
+router.post('/:organizationId', protect, checkOrganizationAccess, orgAdminOrSuperAdmin, async (req, res) => {
   try {
     const { organizationId } = req.params;
     const { companyProfileId, employeeName, employeeEmail, employeeAddress, employeePosition, province, isDefault } = req.body;
+
+    // The profile must belong to this organization
+    const ownsProfile = await CompanyProfile.exists({ _id: companyProfileId, organizationId });
+    if (!ownsProfile) {
+      return res.status(404).json({ success: false, message: 'Company profile not found' });
+    }
 
     // If setting as default, unset other defaults for this profile
     if (isDefault === 'true' || isDefault === true) {
@@ -63,7 +77,7 @@ router.post('/:organizationId', protect, orgAdminOrSuperAdmin, async (req, res) 
 // @route   PUT /api/manual-payslip-employees/:organizationId/:id
 // @desc    Update manual payslip employee
 // @access  OrgAdmin, SuperAdmin
-router.put('/:organizationId/:id', protect, orgAdminOrSuperAdmin, async (req, res) => {
+router.put('/:organizationId/:id', protect, checkOrganizationAccess, orgAdminOrSuperAdmin, async (req, res) => {
   try {
     const { id, organizationId } = req.params;
     const { employeeName, employeeEmail, employeeAddress, employeePosition, province, isDefault } = req.body;
@@ -109,7 +123,7 @@ router.put('/:organizationId/:id', protect, orgAdminOrSuperAdmin, async (req, re
 // @route   DELETE /api/manual-payslip-employees/:organizationId/:id
 // @desc    Delete manual payslip employee
 // @access  OrgAdmin, SuperAdmin
-router.delete('/:organizationId/:id', protect, orgAdminOrSuperAdmin, async (req, res) => {
+router.delete('/:organizationId/:id', protect, checkOrganizationAccess, orgAdminOrSuperAdmin, async (req, res) => {
   try {
     const { id, organizationId } = req.params;
 

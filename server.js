@@ -46,7 +46,7 @@ import webmailRoutes from './routes/webmail.js';
 import taskHubRoutes from './routes/taskhub.js';
 import notificationRoutes from './routes/notifications.js';
 
-import { CORS_ORIGINS, USING_DEFAULT_JWT_SECRET } from './config/env.js';
+import { CORS_ORIGINS, USING_DEFAULT_JWT_SECRET, IS_PRODUCTION } from './config/env.js';
 
 // Socket.IO and HTTP
 import { createServer } from 'http';
@@ -155,7 +155,8 @@ app.use((err, req, res, next) => {
   console.error('Error:', err);
   res.status(err.status || 500).json({
     message: err.message || 'Internal Server Error',
-    error: err.stack
+    // Stack traces are useful locally but must not be sent to clients in production
+    ...(IS_PRODUCTION ? {} : { error: err.stack })
   });
 });
 
